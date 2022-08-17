@@ -1,0 +1,67 @@
+# 下载完所有子模块
+git submodule update --init --recursive
+
+# 查看所有分支的命令
+git branch -a
+
+# 删除某个分支
+git branch -d [分支名]
+
+# 切换远程分支
+git checkout -b 本地分支名 origin/远程分支名
+
+# 删除文件
+git rm -f [文件名]
+
+# 克隆特定分支
+git clone [链接] -b [分支]
+
+
+# 修改名词
+git mv --force AppTest.java apptest.java
+git add apptest.java
+git commit –m "rename"
+git push origin XXX(分支)
+
+# 下载被删除掉的文件
+git checkout [文件路径]
+
+# 使用令牌环push
+git push https://[Personal Access Token]@github.com/[User Name]/[Repository Name].git
+
+
+# git如何新建分支
+1) 切换到基础分支，如主干
+git checkout master
+2）创建并切换到新分支
+git checkout -b panda
+git branch可以看到已经在panda分支上
+3)更新分支代码并提交
+git add *
+git commit -m "init panda"
+git push origin panda
+
+
+# git查看代理
+git config --global --get http.proxy
+git config --global --get https.proxy
+
+# 设置代理：
+git config --global http.proxy 'socks5://127.0.0.1:1080' 
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+
+# git恢复成某个版本
+git reset --hard [hash值]
+# 版本恢复后强行推上去命令
+git push -f
+
+# 取消代理：
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 给sh文件添加可执行权限
+find -name "*.sh" -exec chmod +x {} \;
+find -name "*.sh" -exec git update-index --chmod=+x {} \;
+
+# git查看链接
+git remote -v

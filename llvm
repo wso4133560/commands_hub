@@ -1,0 +1,29 @@
+# 编译参数的官方网站
+https://llvm.org/docs/CMake.html
+
+# llvm编译参数，编译出来全是*.a
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_TARGETS_TO_BUILD="X86;ARM" -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_ENABLE_ASSERTIONS=true -DCMAKE_BUILD_TYPE=Release
+
+# 编译动态库
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON -DCMAKE_BUILD_TYPE=MinSizeRel
+
+# 编译llvm-mctoll的库
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_TARGETS_TO_BUILD="X86;ARM"
+
+# 编译能够支持llvm-qemu的库
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DLLVM_ENABLE_PROJECTS="clang"  -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_FFI=ON
+
+# 编译能够支持在arm上的llvm-qemu的库
+cmake -S llvm -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_FFI=ON -DLLVM_ENABLE_TERMINFO=OFF
+
+# llvm-qemu开启多线程jit的版本
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON   -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_TERMINFO=OFF -DLLVM_ENABLE_THREADS=ON
+
+# 编译带Libc的
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_ENABLE_PROJECTS="clang;lld;libcxx;libcxxabi;libunwind" -DCMAKE_BUILD_TYPE=Release
+
+# 删除make install安装后的文件
+xargs rm -rf < install_manifest.txt
+
+# 使用龙芯交叉编译器
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=mips.cmake

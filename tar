@@ -1,0 +1,14 @@
+# 压缩tar.gz命令
+tar zcvf [*.tar.gz] [文件夹]
+
+# 解压tar.gz命令
+tar xvf [*.tar.gz]
+
+# 压缩命令tar.xz命令
+tar cfJ [*.tar.xz] [目标文件夹]
+
+# 解压tar.xz命令
+tar -xvJf [*.tar.xz]
+
+# 解压tar.bz2文件
+tar jxvf [FileName.tar.bz2]

@@ -1,0 +1,28 @@
+# 设置临时的链接库路径
+export LD_LIBRARY_PATH=[动态库路径]
+
+# http代理
+export http_proxy="http://localhost:port"
+export https_proxy="http://localhost:port"
+
+#socks5代理
+export http_proxy="socks5://127.0.0.1:1080"
+export https_proxy="socks5://127.0.0.1:1080"
+
+# 所有代理
+export ALL_PROXY=socks5://127.0.0.1:1080
+
+# 使用其他路径二进制bin
+export PATH=[文件夹路径]:$PATH
+
+# gcc找到头文件的路径
+export C_INCLUDE_PATH=/usr/include/libxml2:$C_INCLUDE_PATH
+
+# g++找到头文件的路径
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/libxml2:/MyLib
+
+# export变量写入脚本后使用source生效
+source 同“.”， 用于使shell读入指定的shell文件，并依次执行文件中的所有语句（当前shell）
+
+# 使用LD_PRELOAD，如果使用了这个变量，系统会优先去这个路径下寻找，如果找到了就返回，不在往下找了
+LD_PRELOAD=./libtest.so ./a.out
