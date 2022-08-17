@@ -1,2 +1,87 @@
-# commands_hub
-用于管理常用的命令
+## 宗旨
+命令仓库，目的是做到所见即所得，方便使用者快速查询，其中的命令都是工作经验的总结。
+
+### 列表
+
+名称 | 简介
+[ag](https://github.com/wso4133560/commands_hub/blob/main/ag) | 一个类似于grep的工具，速度比grep快
+[alsactl](https://github.com/wso4133560/commands_hub/blob/main/alsactl) | Linux下声卡命令
+[apt](https://github.com/wso4133560/commands_hub/blob/main/apt) | linux下包管理器
+[ar](https://github.com/wso4133560/commands_hub/blob/main/ar) | linux下解压*.a的命令
+[asm](https://github.com/wso4133560/commands_hub/blob/main/asm) | linux下c的asm的用法
+[axel](https://github.com/wso4133560/commands_hub/blob/main/axel) | linux下的多线程http下载工具
+[bcc](https://github.com/wso4133560/commands_hub/blob/main/bcc) | linux下ebpf前端工具
+[bpftrace](https://github.com/wso4133560/commands_hub/blob/main/bpftrace) | linux下的ebpf前端工具
+[c++filt](https://github.com/wso4133560/commands_hub/blob/main/c++filt) | 定位c++符号名称的工具
+[clang](https://github.com/wso4133560/commands_hub/blob/main/clang) | 编译工具
+[cloc](https://github.com/wso4133560/commands_hub/blob/main/cloc) | 代码统计工具
+[cmake](https://github.com/wso4133560/commands_hub/blob/main/cmake) | 代码构建工具
+[configure](https://github.com/wso4133560/commands_hub/blob/main/configure) | 代码构建工具
+[cpio](https://github.com/wso4133560/commands_hub/blob/main/cpio) | cpio格式压缩文件解压压缩工具
+[crontab](https://github.com/wso4133560/commands_hub/blob/main/crontab) | linux下定时任务工具
+[dd](https://github.com/wso4133560/commands_hub/blob/main/dd) | linux下磁盘工具
+[debootstrap](https://github.com/wso4133560/commands_hub/blob/main/debootstrap) | linux下debian文件系统构建工具
+[df](https://github.com/wso4133560/commands_hub/blob/main/df) | linux下查看磁盘使用率工具
+[dmesg](https://github.com/wso4133560/commands_hub/blob/main/dmesg) | linux下查看系统日志工具
+[docker](https://github.com/wso4133560/commands_hub/blob/main/docker) | 虚拟化工具
+[dpkg](https://github.com/wso4133560/commands_hub/blob/main/dpkg) | 包管理器工具
+[du](https://github.com/wso4133560/commands_hub/blob/main/du) | 查看文件夹文件大小工具
+[ebpf](https://github.com/wso4133560/commands_hub/blob/main/ebpf) | linux系统的探针工具
+[ethtool](https://github.com/wso4133560/commands_hub/blob/main/ethtool) | 网卡管理工具
+[export](https://github.com/wso4133560/commands_hub/blob/main/export) | export相关命令
+[fdisk](https://github.com/wso4133560/commands_hub/blob/main/fdisk) | linux磁盘管理命令
+[find](https://github.com/wso4133560/commands_hub/blob/main/find) | linux find查找命令
+[fstrace](https://github.com/wso4133560/commands_hub/blob/main/fstrace) | 函数追踪命令
+[gcc](https://github.com/wso4133560/commands_hub/blob/main/gcc) | gcc编译器的命令
+[gdb](https://github.com/wso4133560/commands_hub/blob/main/gdb) | gdb相关命令
+[git](https://github.com/wso4133560/commands_hub/blob/main/git) | git相关命令
+[go](https://github.com/wso4133560/commands_hub/blob/main/go) | go编译器相关命令
+[grub](https://github.com/wso4133560/commands_hub/blob/main/grub) | grub相关命令
+[iconv](https://github.com/wso4133560/commands_hub/blob/main/iconv) | 文件格式转换命令
+[ifconfig](https://github.com/wso4133560/commands_hub/blob/main/ifconfig) | 管理网络IP的命令
+[iostat](https://github.com/wso4133560/commands_hub/blob/main/iostat) | 查看io状态的命令
+[ip](https://github.com/wso4133560/commands_hub/blob/main/ip) | 管理网络IP的命令
+[ipcs](https://github.com/wso4133560/commands_hub/blob/main/ipcs) | 查看linux下的共享内存
+[iptables](https://github.com/wso4133560/commands_hub/blob/main/iptables) | linux下的防火墙
+[ldd](https://github.com/wso4133560/commands_hub/blob/main/ldd) | 查看动态库链接命令
+[linux-path](https://github.com/wso4133560/commands_hub/blob/main/linux-path) | linux下有用的路径说明
+[llvm](https://github.com/wso4133560/commands_hub/blob/main/llvm) | llvm的编译命令
+[losetup](https://github.com/wso4133560/commands_hub/blob/main/losetup) | 挂载*.img磁盘的工具
+[ls](https://github.com/wso4133560/commands_hub/blob/main/ls) | 显示文件文件夹命令
+[lsblk](https://github.com/wso4133560/commands_hub/blob/main/lsblk) | 查看块设备命令
+[lshw](https://github.com/wso4133560/commands_hub/blob/main/lshw) | 查看显卡信息
+[lsof](https://github.com/wso4133560/commands_hub/blob/main/lsof) | 根据端口管道查找进程信息
+[lspci](https://github.com/wso4133560/commands_hub/blob/main/lscpi) | 显示pci的信息
+[make](https://github.com/wso4133560/commands_hub/blob/main/make) | 项目构建工具
+[memwatch](https://github.com/wso4133560/commands_hub/blob/main/memwatch) | 一个内存泄漏查找工具
+[mount](https://github.com/wso4133560/commands_hub/blob/main/mount) | 磁盘挂载工具
+[mpstat](https://github.com/wso4133560/commands_hub/blob/main/mpstat) | cpu状态观察工具
+[mysql](https://github.com/wso4133560/commands_hub/blob/main/mysql) | mysql的命令工具
+[netstat](https://github.com/wso4133560/commands_hub/blob/main/netstat) | 网络监测工具
+[nginx](https://github.com/wso4133560/commands_hub/blob/main/nginx) | 静态网页服务器
+[passwd](https://github.com/wso4133560/commands_hub/blob/main/passwd) | linux下改密码的工具
+[patch](https://github.com/wso4133560/commands_hub/blob/main/patch) | 打补丁的工具
+[perf](https://github.com/wso4133560/commands_hub/blob/main/perf) | 性能监测工具
+[pidstat](https://github.com/wso4133560/commands_hub/blob/main/pidstat) | 进程检测工具
+[pldd](https://github.com/wso4133560/commands_hub/blob/main/pldd) | 打印进程使用的二进制
+[ps](https://github.com/wso4133560/commands_hub/blob/main/ps) | 进程观测工具
+[pwdx](https://github.com/wso4133560/commands_hub/blob/main/pwdx) | 打印进程工作目录
+[qemu](https://github.com/wso4133560/commands_hub/blob/main/qemu) | linux的虚拟机命令
+[sar](https://github.com/wso4133560/commands_hub/blob/main/sar) | 查看网卡流量命令
+[sed](https://github.com/wso4133560/commands_hub/blob/main/sed) | 字符串替换命令
+[shell](https://github.com/wso4133560/commands_hub/blob/main/shell) | shell的一些示例代码
+[ss](https://github.com/wso4133560/commands_hub/blob/main/ss) | socket监控命令
+[strace](https://github.com/wso4133560/commands_hub/blob/main/strace) | 系统调用监控命令
+[systemd-nspawn](https://github.com/wso4133560/commands_hub/blob/main/systemd-nspawn) | 替代chroot的命令，性能比chroot高
+[tar](https://github.com/wso4133560/commands_hub/blob/main/tar) | 解压缩命令
+[tcpdump](https://github.com/wso4133560/commands_hub/blob/main/tcpdump) | 抓包工具
+[tmux](https://github.com/wso4133560/commands_hub/blob/main/tmux) | 控制台工具
+[tree](https://github.com/wso4133560/commands_hub/blob/main/tree) | 树状图工具
+[uptime](https://github.com/wso4133560/commands_hub/blob/main/uptime) | 开机时间工具
+[useradd](https://github.com/wso4133560/commands_hub/blob/main/useradd) | 添加用户工具
+[valgrind](https://github.com/wso4133560/commands_hub/blob/main/valgrind) | 内存泄漏检测工具
+[virsh](https://github.com/wso4133560/commands_hub/blob/main/virsh) | 虚拟机管理工具
+[vmstat](https://github.com/wso4133560/commands_hub/blob/main/vmstat) | 系统信息摘要工具
+[wget](https://github.com/wso4133560/commands_hub/blob/main/wget) | http下载工具
+[windows](https://github.com/wso4133560/commands_hub/blob/main/windows) | windows的一些命令
+[x11vnc](https://github.com/wso4133560/commands_hub/blob/main/x11vnc) | 启动x11vnc命令

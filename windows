@@ -5,3 +5,7 @@ for /r [文件夹] %i in (*.inc) do @echo %i
 @echo off  
 tree/f>index.txt
 start /b notepad index.txt
+
+# cmd设置代理
+set http_proxy=http://127.0.0.1:1189
+set https_proxy=http://127.0.0.1:1189
