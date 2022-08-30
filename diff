@@ -1,0 +1,5 @@
+# 文件夹比较
+diff -r [文件夹1] [文件夹2]
+
+# 文件夹和tree联用
+diff <(tree -Ci --noreport [文件夹1]) <(tree -Ci --noreport [文件夹2])
