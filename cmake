@@ -24,3 +24,10 @@ cmake [编译参数] -- -j[核心数]
 
 # 指定clang编译
 CC=clang CXX=clang++ cmake [后续参数]
+
+CMAKE_BUILD_TYPE	对应的c编译选项变量	对应的c++编译选项变量
+None	          CMAKE_C_FLAGS	CMAKE_CXX_FLAGS
+Debug	          CMAKE_C_FLAGS_DEBUG	CMAKE_CXX_FLAGS_DEBUG                       -O0 -g
+Release	        CMAKE_C_FLAGS_RELEASE	CMAKE_CXX_FLAGS_RELEASE                   -O3
+RelWithDebInfo	CMAKE_C_FLAGS_RELWITHDEBINFO	CMAKE_CXX_FLAGS_RELWITHDEBINFO    -O2 -g
+MinSizeRel	    CMAKE_C_FLAGS_MINSIZEREL	CMAKE_CXX_FLAGS_MINSIZEREL            -Os
