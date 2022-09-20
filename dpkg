@@ -24,3 +24,8 @@ dpkg -b [文件夹]
 
 # 清楚配置文件
  sudo dpkg --purge [包列表]
+
+# debian系列打包
+sudo dpkg-buildpackage -us -uc -nc
+
+
