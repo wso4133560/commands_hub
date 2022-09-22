@@ -29,4 +29,4 @@ xargs rm -rf < install_manifest.txt
 cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=mips.cmake
 
 # 编译llvm带libcxx的命令
-CC=clang CXX=clang++ cmake -S llvm -B build -G "Unix Makefiles"  -DLLVM_ENABLE_PROJECTS="libcxxabi;libcxx" -DCMAKE_BUILD_TYPE=Release
+CC=clang CXX=clang++ cmake -S llvm -B build -G "Unix Makefiles"  -DLLVM_ENABLE_PROJECTS="libcxxabi;libcxx" -DCMAKE_BUILD_TYPE=Release -DLIBCXX_ENABLE_FILESYSTEM=ON
