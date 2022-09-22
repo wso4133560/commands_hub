@@ -33,3 +33,7 @@ $ tmux split-window -h
 
 # tmux详细教程链接
 https://www.ruanyifeng.com/blog/2019/10/tmux.html
+
+# 向上翻滚操作步骤
+ctrl + b;
+[
