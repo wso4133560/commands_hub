@@ -34,3 +34,7 @@ MinSizeRel	    CMAKE_C_FLAGS_MINSIZEREL	CMAKE_CXX_FLAGS_MINSIZEREL            -O
 
 # 打印宏信息
 message("CMAKE_CURRENT_DIR = ${CMAKE_CURRENT_DIR}")
+
+# 执行外部命令
+execute_process(COMMAND ls .. OUTPUT_VARIABLE ls_ret)
+message(STATUS "ls output:\n${ls_ret}")
