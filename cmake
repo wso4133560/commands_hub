@@ -38,3 +38,10 @@ message("CMAKE_CURRENT_DIR = ${CMAKE_CURRENT_DIR}")
 # 执行外部命令
 execute_process(COMMAND ls .. OUTPUT_VARIABLE ls_ret)
 message(STATUS "ls output:\n${ls_ret}")
+
+# DEFINED的宏的用法和信息
+if(DEFINED LIBCXX_INCLUDE)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I${LIBCXX_INCLUDE} -Wl,-rpath,${LIBCXX_INCLUDE}")
+else()
+  message(FATAL_ERROR "no LIBCXX_INCLUDE")
+endif()
