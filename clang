@@ -10,4 +10,5 @@
 # 加上下面的才能保证得到运行结果
 ASAN_OPTIONS=detect_stack_use_after_return=1 [需要运行的程序]
 
-
+# 去掉因为编译参数导致的warnning
+-Qunused-arguments
