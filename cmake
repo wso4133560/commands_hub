@@ -45,3 +45,5 @@ if(DEFINED LIBCXX_INCLUDE)
 else()
   message(FATAL_ERROR "no LIBCXX_INCLUDE")
 endif()
+
+set(ENV{PATH} /home/test)
