@@ -30,3 +30,12 @@ cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_BUILD_LLVM_DYLIB=ON -DCMAKE_BU
 
 # 编译llvm带libcxx的命令
 CC=clang CXX=clang++ cmake -S llvm -B build -G "Unix Makefiles"  -DLLVM_ENABLE_PROJECTS="libcxxabi;libcxx;libstdc++" -DCMAKE_BUILD_TYPE=Release -DLIBCXX_ENABLE_FILESYSTEM=ON
+
+# 使用libcxxabi编译llvm
+$ mkdir build && cd build
+$ export CC=clang CXX=clang++
+$ cmake -DLLVM_PATH=path/to/llvm \
+        -DLIBCXX_CXX_ABI=libcxxabi \
+        -DLIBCXX_CXX_ABI_INCLUDE_PATHS=path/to/libcxxabi/include \
+        path/to/libcxx
+ 
