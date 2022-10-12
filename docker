@@ -40,6 +40,9 @@ docker rm [镜像]
 # 查看镜像
 docker image ls
 
+# 重启容器
+docker restart [容器ID]
+
 # 打包文件系统
 tar -cvpf /tmp/system.tar --directory=/ --exclude=proc --exclude=sys --exclude=dev --exclude=run --exclude=bookmarkearth
 
