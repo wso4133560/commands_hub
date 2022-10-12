@@ -73,23 +73,15 @@ https://docs.docker.com/engine/reference/run/
 
 # docker 进入ssh的方法
 1.启动容器
-sudo docker run -it --security-opt seccomp=unconfined 39f5d02545a9 /bin/bash
+sudo docker run -it -p 50001:22 --security-opt seccomp=unconfined 39f5d02545a9 /bin/bash 
 2.安装ssh
 apt-get install openssh-server openssh-client
 vim /etc/ssh/sshd_config
-PasswordAuthentication yes
 PermitRootLogin yes
 3.修改root密码
 passwd
-4.退出容器后提交容器
-sudo docker commit a6956150395a ubuntu/debug
-5.停止删除容器
-docker stop [container-id] 
-docker rm [container-id]
-6.后台启动新容器
-docker run -it -p 50001:22 [image-id] /bin/bash
-7.启动sshd
-/usr/sbin/sshd
+4.启动sshd
+/usr/sbin/sshd -D
 
 # docker进入正在运行的容器
 docker exec -it [容器ID] /bin/bash
