@@ -86,7 +86,9 @@ sudo docker commit a6956150395a ubuntu/debug
 docker stop [container-id] 
 docker rm [container-id]
 6.后台启动新容器
-docker run -it -p 50001:22 [image-id] /usr/sbin/sshd -D
+docker run -it -p 50001:22 [image-id] /bin/bash
+7.启动sshd
+/usr/sbin/sshd -D
 
 # docker进入正在运行的容器
 docker exec -it [容器ID] /bin/bash
