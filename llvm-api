@@ -1,1 +1,15 @@
 # 主要目的是做LLVM的速查手册
+
+# llvm本地jit虚拟机 初始化函数
+llvm::InitializeNativeTarget();
+llvm::InitializeNativeTargetAsmPrinter();
+llvm::InitializeNativeTargetAsmParser();
+
+# llvm创建jit虚拟机函数
+llvm::TargetRegistry::lookupTarget
+the_target->createTargetMachine
+
+# llvm的jit函数创建函数
+llvm::FunctionType::get
+llvm::Function::Create
+
