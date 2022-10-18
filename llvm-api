@@ -22,3 +22,4 @@ llvm::FunctionType::get
 llvm::Function::Create
 llvm::arg_begin       # 函数内部参数开始寄存器
 llvm::arg_end
+callFunc->print(llvm::outs(), nullptr);  #打印函数IR
