@@ -5,9 +5,10 @@ llvm::InitializeNativeTarget();
 llvm::InitializeNativeTargetAsmPrinter();
 llvm::InitializeNativeTargetAsmParser();
 
-# llvm创建block块
+# llvm创建block块和block里面的指令操作
 llvm::BasicBlock::Create
 llvm::IRBuilder<> builder(BB);
+CreateGEP       # 创建数组
 
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
@@ -16,5 +17,5 @@ the_target->createTargetMachine
 # llvm的jit函数创建function
 llvm::FunctionType::get
 llvm::Function::Create
-llvm::arg_begin
+llvm::arg_begin       # 函数内部参数开始寄存器
 llvm::arg_end
