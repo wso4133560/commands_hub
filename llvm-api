@@ -8,7 +8,7 @@ llvm::InitializeNativeTargetAsmParser();
 # llvm创建block块和block里面的指令操作
 llvm::BasicBlock::Create
 llvm::IRBuilder<> builder(BB);
-CreateGEP       # 创建数组
+CreateGEP       # 获取数组偏移的llvm::Value
 
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
