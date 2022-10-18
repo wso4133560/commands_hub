@@ -5,11 +5,16 @@ llvm::InitializeNativeTarget();
 llvm::InitializeNativeTargetAsmPrinter();
 llvm::InitializeNativeTargetAsmParser();
 
+# llvm创建block块
+llvm::BasicBlock::Create
+llvm::IRBuilder<> builder(BB);
+
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
 the_target->createTargetMachine
 
-# llvm的jit函数创建函数
+# llvm的jit函数创建function
 llvm::FunctionType::get
 llvm::Function::Create
-
+llvm::arg_begin
+llvm::arg_end
