@@ -9,7 +9,7 @@ llvm::InitializeNativeTargetAsmParser();
 llvm::BasicBlock::Create
 llvm::IRBuilder<> builder(BB);
 CreateGEP       # 创建一个数组
-getElementPointer #  
+GetElementPtrInst # 获取数组里面的偏移
 CreateIntToPtr  # int地址变成指针
 
 # llvm创建jit虚拟机函数
