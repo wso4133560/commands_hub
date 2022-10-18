@@ -9,6 +9,7 @@ llvm::InitializeNativeTargetAsmParser();
 llvm::BasicBlock::Create
 llvm::IRBuilder<> builder(BB);
 CreateGEP       # 获取数组偏移的llvm::Value
+CreateIntToPtr  # int地址变成指针
 
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
