@@ -21,3 +21,6 @@ int main()
 	return 0;
 }
 https://akaedu.github.io/book/ch19s05.html
+
+# gcc官方用法
+https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html
