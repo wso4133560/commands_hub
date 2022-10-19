@@ -24,3 +24,6 @@ https://akaedu.github.io/book/ch19s05.html
 
 # gcc官方用法
 https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html
+
+# 将一个变量指定到寄存器里面
+register uint64_t p0 asm("x0") = a;
