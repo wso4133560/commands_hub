@@ -5,6 +5,9 @@ llvm::InitializeNativeTarget();
 llvm::InitializeNativeTargetAsmPrinter();
 llvm::InitializeNativeTargetAsmParser();
 
+# llvm::Value
+StringRef Value::getName() const      # 获取value的名称
+
 # llvm创建block块和block里面的指令操作
 llvm::BasicBlock::Create
 llvm::IRBuilder<> builder(BB);
@@ -24,3 +27,6 @@ llvm::Function::Create
 llvm::arg_begin       # 函数内部参数开始寄存器
 llvm::arg_end
 callFunc->print(llvm::outs(), nullptr);  #打印函数IR
+
+# jit主要参考下面的文件
+HowToUseLLJIT.cpp
