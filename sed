@@ -9,3 +9,6 @@ sed -i '1 i hello' sample.txt
 
 # sample.txt文件第1行后面添加"hello"
 sed -i '1 a hello' sample.txt
+
+# 截取文件长度
+sed -n '2654,4457p' base.txt > ir.txt
