@@ -16,7 +16,6 @@ CreateIntToPtr  # int地址变成指针
 llvm::Type::getInt8PtrTy # 获取int指针的类型
 llvm::ConstantInt::get #将常数变成llvm::Value
 
-
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
 the_target->createTargetMachine
@@ -27,6 +26,18 @@ llvm::Function::Create
 llvm::arg_begin       # 函数内部参数开始寄存器
 llvm::arg_end
 callFunc->print(llvm::outs(), nullptr);  #打印函数IR
+
+# 函数insert新block块的方法
+llvm::BasicBlock::Create(s_mod->getContext(), "", llvmFunc, block);
+
+# irbuilder的特殊用法
+1.替换结束指令指令
+llvm::IRBuilder<> irb(subIt);
+llvm::Instruction* terminator = subIt->getTerminator();
+irb.SetInsertPoint(terminator);
+irb.CreateBr(block);
+2.替换指令的函数
+llvm::ReplaceInstWithInst(op,newInst);
 
 # jit引擎
 必须下面执行完了后才能跳转到jit出来的内存
