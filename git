@@ -79,3 +79,6 @@ git commit --amend
 
 # git环境变量信息
 git config --global -l
+
+# 撤销commit
+git reset --soft HEAD^
