@@ -46,6 +46,8 @@ llvm::ReplaceInstWithInst(op,newInst);
 CreateZExtOrTrunc #类型扩展时高位 如果为1 全部充0
 CreateSExtOrTrunc #类型扩展时高位 如果为0 全部充1
 
+curIRB->CreateVectorSplat   # 此函数创建数组
+
 # jit引擎
 必须下面执行完了后才能跳转到jit出来的内存
 ExecutionEngine->finalizeObject()
