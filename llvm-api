@@ -32,6 +32,7 @@ llvm::Function::Create
 llvm::arg_begin       # 函数内部参数开始寄存器
 llvm::arg_end
 callFunc->print(llvm::outs(), nullptr);  #打印函数IR
+bool flag = llvm::verifyFunction(*llvmFunc, &llvm::outs());  # 校验函数是否有问题。返回值为false 函数OK ，返回值为true 函数有问题
 
 # 函数insert新block块的方法
 llvm::BasicBlock::Create(s_mod->getContext(), "", llvmFunc, block);
