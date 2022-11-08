@@ -12,6 +12,7 @@ auto BitWidth = Src->getType()->getIntegerBitWidth(); # 通过变量获取类型
 # llvm::Value
 StringRef Value::getName() const      # 获取value的名称
 llvm::VectorType::get(llvm::Type::getInt32Ty(*Con), 2);   # 获取vector的类型
+eraseFromParent 删除自己
 
 # llvm创建block块和block里面的指令操作
 llvm::BasicBlock::Create
