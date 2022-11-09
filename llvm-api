@@ -22,6 +22,7 @@ CreateIntToPtr  # int地址变成指针
 llvm::Type::getInt8PtrTy # 获取int指针的类型
 llvm::ConstantInt::get #将常数变成llvm::Value
 llvm::ConstantFP::get  # 将常数变成llvm::Value
+llvm::Constant::getNullValue(SrcType); # 根据类型获取零值
 
 # llvm创建jit虚拟机函数
 llvm::TargetRegistry::lookupTarget
