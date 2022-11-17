@@ -86,3 +86,6 @@ PermitRootLogin yes
 passwd
 4.启动sshd
 /usr/sbin/sshd -p 50002
+
+# 添加特权命令
+--privileged	
