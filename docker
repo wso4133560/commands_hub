@@ -76,7 +76,7 @@ https://docs.docker.com/engine/reference/run/
 
 # docker 进入ssh的方法
 1.启动容器
-sudo docker run -it --net=host --security-opt --privileged	 seccomp=unconfined 39f5d02545a9 /bin/bash 
+sudo docker run -it --privileged	 --net=host --security-opt seccomp=unconfined 39f5d02545a9 /bin/bash 
 2.安装ssh
 apt update
 apt install openssh-server openssh-client vim
