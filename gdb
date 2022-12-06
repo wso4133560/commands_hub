@@ -140,6 +140,10 @@ source xxx.py
 # 编译带python的扩展
 ../configure --with-python=python3
 
+# Python Exception : No module named gdb问题解决
+sudo mkdir -p /usr/local/share/gdb/python/gdb/
+sudo cp -rf ~/binutils-gdb/gdb/python/lib/gdb/* /usr/local/share/gdb/python/gdb/
+
 例子：
 import gdb
 
