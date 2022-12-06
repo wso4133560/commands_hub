@@ -137,6 +137,9 @@ https://blog.mengy.org/extend-gdb-with-python/
 ## 注册命令
 source xxx.py
 
+# 编译带python的扩展
+../configure --with-python=python3
+
 例子：
 import gdb
 
