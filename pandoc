@@ -1,0 +1,2 @@
+# markdown转mediawiki
+pandoc -w mediawiki [markdown的文件] -o BEAST.wiki
