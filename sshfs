@@ -1,0 +1,2 @@
+# linux上映射远端机器的硬盘到本地
+sudo sshfs -o cache=yes,allow_other [账号]@[ip]:[远端的文件夹] [本地的文件夹]
