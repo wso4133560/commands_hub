@@ -8,7 +8,7 @@ tesseract --list-langs
 git clone https://github.com/tesseract-ocr/tessdata_best.git
 
 chi_sim.traineddata   # 简体中文训练后的数据
-\usr\share\tesseract-ocr\4.00\   # 存访traineddata的目录
+/usr/share/tesseract-ocr/4.00/tessdata   # 存访traineddata的目录
 
 
 # 打印ocr
