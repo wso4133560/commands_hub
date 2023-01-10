@@ -1,0 +1,7 @@
+# 安装
+sudo apt-get install tesseract-ocr
+
+# 当前支持的语言列表
+tesseract --list-langs
+
+# 安装支持的中文
