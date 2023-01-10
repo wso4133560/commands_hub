@@ -5,3 +5,6 @@ sudo apt-get install tesseract-ocr
 tesseract --list-langs
 
 # 安装支持的中文
+git clone https://github.com/tesseract-ocr/tessdata_best.git
+
+chi_sim.traineddata   # 简体中文训练后的数据
