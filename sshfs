@@ -1,2 +1,13 @@
 # linux上映射远端机器的硬盘到本地
 sudo sshfs -o cache=yes,allow_other [账号]@[ip]:[远端的文件夹] [本地的文件夹]
+
+
+服务器端定时向客户端发送心跳（一劳永逸）
+
+# 修改服务器端 ssh配置 /etc/ssh/sshd_config
+
+vim /etc/ssh/sshd_config
+# 添加
+
+ClientAliveInterval 30
+ClientAliveCountMax 6
