@@ -14,3 +14,6 @@ chi_sim.traineddata   # 简体中文训练后的数据
 # 打印ocr
 tesseract [图片] stdout
 tesseract [图片] [保存文件名] -l [字体类型]
+
+# 下载中文字体的地址
+https://github.com/gumblex/tessdata_chi/releases
