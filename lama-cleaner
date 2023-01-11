@@ -1,0 +1,5 @@
+# 安装图片水印处理工具
+pip install lama-cleaner
+
+# 下载并启动lama-cleaner
+lama-cleaner --model=lama --device=cpu --port=8080
