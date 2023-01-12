@@ -1,0 +1,7 @@
+# 放开对core文件限制
+ulimit -c unlimited
+
+# coredump文件保存位置
+cat /proc/sys/kernel/core_pattern
+
+coredump文件用gdb打开
