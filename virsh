@@ -72,3 +72,6 @@ virsh edit [虚拟机名称]
   <source dev='/dev/sda'/>
   <target dev='hdb' bus='ide'/>
 </disk>
+
+# 启动默认网络命令
+virsh net-start --network default 
