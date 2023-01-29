@@ -82,3 +82,19 @@ git config --global -l
 
 # 撤销commit
 git reset --soft HEAD^
+
+# 恢复某个文件到某个提交
+git checkout [分支ID] -- ［文件路径］
+
+# 删除某个分支
+git push origin :[branch_name]
+
+# 配置分行符
+例如，您可以使用它来控制文件中的结束行。在Windows和基于Unix的系统中，新行有不同的字符(相应的\r\n和\n)。
+因此，使用gitattributes，我们可以为Windows和Unix使用* text=auto在.gitattributes中为任何使用git的人对齐。
+这样，如果你在Windows中使用Git项目，你会得到\r\n如果你在使用Unix或Linux，你会得到\n。
+
+# 如何列出给定存储库中的当前git引用?
+find .git/refs/
+
+
