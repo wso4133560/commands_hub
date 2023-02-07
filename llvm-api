@@ -69,3 +69,7 @@ CPUReg.Base = CallInst::Create(IA, "cpu", LastInst);
 llvm::FunctionType *AsmFTy = llvm::FunctionType::get(Type::getVoidTy(FStub->getContext()),AsmArgTypes, false);
 llvm::InlineAsm *IA = llvm::InlineAsm::get(AsmFTy, "mfc1 $$4,$$f12", "", true, /* IsAlignStack */ false, llvm::InlineAsm::AD_Intel);
 CallInst::Create(IA, BB);
+
+llvm::FunctionType *AsmFTy = llvm::FunctionType::get(Type::getVoidTy(FStub->getContext()),AsmArgTypes, false);
+llvm::InlineAsm *IA = llvm::InlineAsm::get(AsmFTy, "mfc1 $$4,$$f12", "", true, /* IsAlignStack */ false, llvm::InlineAsm::AD_ATT);
+CallInst::Create(IA, BB);
