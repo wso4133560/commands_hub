@@ -1,2 +1,5 @@
 # 每隔一秒执行一次who命令
 watch -d -n 1 'who'
+
+# 查看运行的命令
+watch -d -n 1 'ps -r | grep [关键字] >> 文件'
