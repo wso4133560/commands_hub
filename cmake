@@ -6,6 +6,9 @@
 # 去除默认内联
 -DCMAKE_C_FLAGS="-fno-inline-functions" -DCMAKE_CXX_FLAGS="-fno-inline-functions" 
 
+# c++ flags
+-DCMAKE_CXX_FLAGS=""
+
 # 多核编译
 cmake [编译参数] -- -j[核心数]
 
