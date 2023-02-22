@@ -23,3 +23,6 @@ __attribute__((constructor)) static void xxxx()
 
 # 打印上个函数的地址
 __builtin_return_address
+
+# 查看gcc预定义宏
+gcc -dM -E - < /dev/null
