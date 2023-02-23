@@ -39,3 +39,5 @@ $ cmake -DLLVM_PATH=path/to/llvm \
         -DLIBCXX_CXX_ABI_INCLUDE_PATHS=path/to/libcxxabi/include \
         path/to/libcxx
  
+# llvm-config链接静态库
+llvm-config --link-static --libs
