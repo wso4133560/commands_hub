@@ -75,12 +75,9 @@ llvm::InlineAsm *IA = llvm::InlineAsm::get(AsmFTy, "mfc1 $$4,$$f12", "", true, /
 CallInst::Create(IA, BB);
 
 
-# llvm偏移指针
-// 创建一个整型类型的值 1，用于偏移指针
-ConstantInt* offset = ConstantInt::get(Type::getInt32Ty(Context), 1);
-// 创建一个包含偏移信息的整型数组
-Value* indices[] = {offset};
-// 调用 CreateGEP() 方法来获取偏移后的指针值
-Value* pOffset = Builder.CreateGEP(p, indices);
-// 将指针类型的值强制转换成 int* 类型
-Value* pInt = Builder.CreatePointerCast(pOffset, Type::getInt32PtrTy(Context));
+
+# 偏移10个字节
+// 定义一个 i8* 类型的指针
+auto* ptr = builder.CreateAlloca(builder.getInt8Ty(), nullptr, "ptr");
+// 偏移 10 个字节，即 10 个 i8 类型的元素
+auto* offsetPtr = builder.CreateGEP(builder.getInt8Ty(), ptr, builder.getInt64(10));
