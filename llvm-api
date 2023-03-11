@@ -81,3 +81,42 @@ CallInst::Create(IA, BB);
 auto* ptr = builder.CreateAlloca(builder.getInt8Ty(), nullptr, "ptr");
 // 偏移 10 个字节，即 10 个 i8 类型的元素
 auto* offsetPtr = builder.CreateGEP(builder.getInt8Ty(), ptr, builder.getInt64(10));
+
+# llvm调用外部函数
+#include <llvm/IR/IRBuilder.h>
+#include <llvm/IR/Module.h>
+#include <llvm/IR/Type.h>
+
+using namespace llvm;
+
+// Declare the external function
+extern "C" int foo(int, int);
+
+int main() {
+  LLVMContext Context;
+  Module M("test", Context);
+  IRBuilder<> Builder(Context);
+
+  // Create a function type that describes the external function
+  Type *ArgType1 = Type::getInt32Ty(Context);
+  Type *ArgType2 = Type::getInt32Ty(Context);
+  Type *ReturnType = Type::getInt32Ty(Context);
+  FunctionType *FT = FunctionType::get(ReturnType, { ArgType1, ArgType2 }, false);
+
+  // Get or insert the external function
+  Function *F = M.getOrInsertFunction("foo", FT);
+
+  // Create arguments
+  Value *Arg1 = Builder.getInt32(1);
+  Value *Arg2 = Builder.getInt32(2);
+  std::vector<Value*> Args = { Arg1, Arg2 };
+
+  // Call the external function
+  Value *RetVal = Builder.CreateCall(F, Args);
+
+  // Print the result
+  Builder.CreateRet(RetVal);
+  M.print(outs(), nullptr);
+
+  return 0;
+}
