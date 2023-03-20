@@ -97,4 +97,6 @@ git push origin :[branch_name]
 # 如何列出给定存储库中的当前git引用?
 find .git/refs/
 
+# git 看日志的方法
+git log --oneline
 
