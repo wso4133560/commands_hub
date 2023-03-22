@@ -1,0 +1,2 @@
+# 删除文件的rpath的操作
+patchelf --remove-rpath [二进制文件]
