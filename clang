@@ -12,3 +12,6 @@ ASAN_OPTIONS=detect_stack_use_after_return=1 [需要运行的程序]
 
 # 去掉因为编译参数导致的warnning
 -Qunused-arguments
+
+# 将C语言编译成llvm ir
+clang -S -emit-llvm test.c -o test.ll
