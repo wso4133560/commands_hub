@@ -15,3 +15,9 @@ ASAN_OPTIONS=detect_stack_use_after_return=1 [需要运行的程序]
 
 # 将C语言编译成llvm ir
 clang -S -emit-llvm test.c -o test.ll
+
+# 反汇编二进制文件
+llvm-objdump -d [二进制文件]
+
+# 反汇编bc到*.ll
+llvm-dis [*.bc文件]
