@@ -19,5 +19,16 @@ clang -S -emit-llvm test.c -o test.ll
 # 反汇编二进制文件
 llvm-objdump -d [二进制文件]
 
+# 反汇编机器码
+llvm-objdump -S [二进制文件]
+
 # 反汇编bc到*.ll
 llvm-dis [*.bc文件]
+
+# 将多个bc合并成一个bc
+llvm-link -o [合并后bc的文件名] [bc1, bc2, ...]
+
+# 将一个bc文件编译成一个.o文件
+llc -o2 -march=[架构名称] -filetype=obj *.bc -o *.o
+
+
