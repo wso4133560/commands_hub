@@ -31,4 +31,5 @@ llvm-link -o [合并后bc的文件名] [bc1, bc2, ...]
 # 将一个bc文件编译成一个.o文件
 llc -o2 -march=[架构名称] -filetype=obj *.bc -o *.o
 
-
+# 输出编译过程中的调试信息
+llc -debug *.ll> log 2>&1
