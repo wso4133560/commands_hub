@@ -41,3 +41,6 @@ $ cmake -DLLVM_PATH=path/to/llvm \
  
 # llvm-config链接静态库
 llvm-config --link-static --libs
+
+# 禁用内部指令的编译参数
+-DLLVM_ENABLE_EXPENSIVE_CHECKS=OFF
