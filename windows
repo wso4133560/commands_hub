@@ -9,3 +9,6 @@ start /b notepad index.txt
 # cmd设置代理
 set http_proxy=http://127.0.0.1:1189
 set https_proxy=http://127.0.0.1:1189
+
+# 清除cmd打印
+cls
