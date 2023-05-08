@@ -18,3 +18,6 @@ SEND,netstat -tnlp
 
 # 查看TCP连接数量
 netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+
+# 查看某个端口连接数量
+ netstat -an | grep [端口] | wc -l
