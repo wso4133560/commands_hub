@@ -12,7 +12,7 @@ sudo vim /etc/default/distccd
 # 客户端配置
 vim /etc/distcc/hosts
 添加服务器的IP地址
-[ip地址],lzo
+[ip地址]/[分发线程数量]
 
 # cmake修改
 cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER_LAUNCHER=distcc -DCMAKE_CXX_COMPILER_LAUNCHER=distcc [文件夹]
