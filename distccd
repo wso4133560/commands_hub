@@ -7,12 +7,12 @@ sudo vim /etc/default/distccd
 将ALLOWEDNETS和LISTENER修改成需要的网段
 
 ## 运行命令
-/usr/bin/distccd --daemon --user nobody --allow 10.0.10.1/24 --jobs=128
+/usr/bin/distccd --daemon --user nobody --allow 10.0.10.1/24 --jobs=32
 
 # 客户端配置
-vim ~/.distcc/hosts
+vim /etc/distcc/hosts
 添加服务器的IP地址
 [ip地址],lzo
 
 # cmake修改
-CC="distcc gcc" CXX="distcc g++" cmake .......
+ cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER_LAUNCHER=distcc -DCMAKE_CXX_COMPILER_LAUNCHER=distcc [文件夹]
