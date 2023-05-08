@@ -12,6 +12,7 @@ sudo vim /etc/default/distccd
 # 客户端配置
 vim ~/.distcc/hosts
 添加服务器的IP地址
+[ip地址],lzo
 
 # cmake修改
 CC="distcc gcc" CXX="distcc g++" cmake .......
