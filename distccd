@@ -7,7 +7,7 @@ sudo vim /etc/default/distccd
 将ALLOWEDNETS和LISTENER修改成需要的网段
 
 ## 运行命令
-/usr/bin/distccd --daemon --user nobody --allow 10.0.10.1/24 --jobs 128
+/usr/bin/distccd --daemon --user nobody --allow 10.0.10.1/24 --jobs=128
 
 # 客户端配置
 vim ~/.distcc/hosts
