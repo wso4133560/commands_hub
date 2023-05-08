@@ -1,0 +1,17 @@
+# 安装软件
+sudo apt install distccd
+
+# 服务器端配置
+## 修改监听参数
+sudo vim /etc/default/distccd
+将ALLOWEDNETS和LISTENER修改成需要的网段
+
+## 运行命令
+/usr/bin/distccd --daemon --user nobody
+
+# 客户端配置
+vim ~/.distcc/hosts
+添加服务器的IP地址
+
+# cmake修改
+CC="distcc gcc" CXX="distcc g++" cmake .......
