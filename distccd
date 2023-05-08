@@ -15,4 +15,5 @@ vim /etc/distcc/hosts
 [ip地址],lzo
 
 # cmake修改
- cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER_LAUNCHER=distcc -DCMAKE_CXX_COMPILER_LAUNCHER=distcc [文件夹]
+cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER_LAUNCHER=distcc -DCMAKE_CXX_COMPILER_LAUNCHER=distcc [文件夹]
+make -j32
