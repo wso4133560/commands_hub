@@ -17,3 +17,6 @@ vim /etc/distcc/hosts
 # cmake修改
 cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER_LAUNCHER=distcc -DCMAKE_CXX_COMPILER_LAUNCHER=distcc [文件夹]
 make -j32
+
+# 监视分发数量的命令
+distccmon-text [打印间隔时间单位秒]
