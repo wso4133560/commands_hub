@@ -50,3 +50,8 @@ else()
 endif()
 
 set(ENV{PATH} /home/test)
+
+# cmake /dev/null失效的情况
+sudo systemctl stop apparmor.service
+sudo systemctl disable apparmor.service
+sudo reboot
