@@ -3,3 +3,6 @@ export PATH=/usr/sbin:$PATH
 
 useradd [名字]
 useradd -s [/bin/bash] -m [名字]
+
+# 添加sudo权限
+sudo usermod -aG sudo [名字]
