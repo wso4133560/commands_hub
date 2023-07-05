@@ -47,3 +47,6 @@ llvm-config --link-static --libs
 
 # llvm提取没有链接的函数名
 llvm-nm -g [*.o]
+
+# 提取bc文件中的函数
+llvm-extract -func-list=function_list.txt output.bc -o 3.bc
