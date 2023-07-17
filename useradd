@@ -6,3 +6,8 @@ useradd -s [/bin/bash] -m [名字]
 
 # 添加sudo权限
 sudo usermod -aG sudo [名字]
+
+# 如果上述未生效
+sudo visudo
+添加
+wukai   ALL=(ALL:ALL) ALL
