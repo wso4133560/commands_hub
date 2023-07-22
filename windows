@@ -12,3 +12,6 @@ set https_proxy=http://127.0.0.1:1189
 
 # 清除cmd打印
 cls
+
+# 传输文件
+robocopy .\model\ \\192.168.1.196\pyporch-model /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
