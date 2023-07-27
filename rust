@@ -1,0 +1,2 @@
+# rust的环境安装
+curl https://sh.rustup.rs -sSf | sh
