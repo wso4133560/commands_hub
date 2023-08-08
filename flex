@@ -1,5 +1,7 @@
 # 编译命令
 flex script_flex.l
+# 输出到指定路径
+flex -o /path/to/output/lexer.c lexer.l
 
 %{
 包含的是C语言头文件等功能
