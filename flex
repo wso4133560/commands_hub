@@ -14,3 +14,5 @@ flex script_flex.l
 
 # 生成的c文件的名称
 %option outfile="lex.yy.c"
+
+有优先级的区别 写在前面优先级更高
