@@ -28,5 +28,8 @@ int yyerror(const char* msg) {
 void yyerror(const char* msg);
 int yylex(void);
 
-
+# 在头文件中生成函数声明
+%header {
+    void performAction(int value); // 在头文件中生成函数声明
+}
 
