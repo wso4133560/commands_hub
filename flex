@@ -19,3 +19,6 @@ flex script_flex.l
 
 # yytext和yyleng来复制字符串给bison使用
 yylval.str = strndup(yytext, yyleng);
+
+# 打印行数
+yylineno
