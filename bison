@@ -1,5 +1,7 @@
 # 编译bison的命令
 bison -d example.y
+# 输出到指定路径
+bison -o /path/to/output/parser.c parser.y
 
 # 传入字符串的写法
 #include <stdio.h>
