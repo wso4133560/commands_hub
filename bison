@@ -21,3 +21,7 @@ int yyerror(const char* msg) {
     printf("Error: %s\n", msg);
     return 0;
 }
+
+# .y文件需要在include下加上下面两个声明消除warnning
+void yyerror(const char* msg);
+int yylex(void);
