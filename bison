@@ -26,40 +26,5 @@ int yyerror(const char* msg) {
 void yyerror(const char* msg);
 int yylex(void);
 
-# 一行一行解析文件的用法
-%{
-#include <stdio.h>
-#include <string.h>
-
-extern char* current_line;
-%}
-
-%token LINE
-
-%%
-start:   /* 语法规则 */
-        ;
-%%
-
-int main() {
-    FILE* file = fopen("input.txt", "r");
-    if (file == NULL) {
-        printf("Failed to open file.\n");
-        return 1;
-    }
-    char line[256];
-    while (fgets(line, sizeof(line), file) != NULL) {
-        current_line = strdup(line); // 保存当前行的副本
-        yyparse(); // 解析当前行
-        free(current_line); // 释放保存的行副本的内存
-    }
-    fclose(file);
-    return 0;
-}
-
-void yyerror(const char* msg) {
-    printf("Error: %s\n", msg);
-}
-
 
 
