@@ -55,3 +55,6 @@ set(ENV{PATH} /home/test)
 sudo systemctl stop apparmor.service
 sudo systemctl disable apparmor.service
 sudo reboot
+
+# 查看linux是否安装这个包
+find_package([包名] REQUIRED)
