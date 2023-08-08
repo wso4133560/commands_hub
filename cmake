@@ -65,3 +65,6 @@ find_program(COMMAND_PATH bison)
 # 查找是否有某个库
 find_library(PCAP_LIBRARY NAMES pcap)
 find_path(PCAP_INCLUDE_DIR NAMES pcap.h)
+
+# 当前处理CMakeLists.txt的路径
+${CMAKE_CURRENT_LIST_DIR}
