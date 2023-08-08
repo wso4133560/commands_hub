@@ -16,3 +16,6 @@ flex script_flex.l
 %option outfile="lex.yy.c"
 
 有优先级的区别 写在前面优先级更高
+
+# yytext和yyleng来复制字符串给bison使用
+yylval.str = strndup(yytext, yyleng);
