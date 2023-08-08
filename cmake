@@ -61,3 +61,7 @@ find_package([包名] REQUIRED)
 
 # 查看linux是否安装某命令
 find_program(COMMAND_PATH bison)
+
+# 查找是否有某个库
+find_library(PCAP_LIBRARY NAMES pcap)
+find_path(PCAP_INCLUDE_DIR NAMES pcap.h)
