@@ -72,3 +72,10 @@ ${CMAKE_CURRENT_LIST_DIR}
 # 添加链接路径
 link_directories(/path/to/library)
 
+# 使用llvm-config获取正确路径的位置的示例
+execute_process(
+    COMMAND llvm-config --includedir
+    OUTPUT_VARIABLE LLVM_INCLUDEDIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
