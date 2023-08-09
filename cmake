@@ -68,3 +68,7 @@ find_path(PCAP_INCLUDE_DIR NAMES pcap.h)
 
 # 当前处理CMakeLists.txt的路径
 ${CMAKE_CURRENT_LIST_DIR}
+
+# 添加链接路径
+link_directories(/path/to/library)
+
