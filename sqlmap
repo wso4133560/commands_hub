@@ -6,3 +6,6 @@ python3 sqlmap.py -d mysql://[数据库用户名]:[密码]@[ip:端口]/[数据�
 
 # dump数据库
 python3 sqlmap.py -d mysql://[数据库用户名]:[密码]@[ip:端口]/[数据名] -f --banner --dump qdpm
+
+# 执行sql命令
+python3 sqlmap.py -d mysql://[数据库用户名]:[密码]@[ip:端口]/[数据名] -f --banner --sql-shell '[数据库命令]'
