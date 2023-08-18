@@ -1,0 +1,8 @@
+# 源代码
+https://github.com/sqlmapproject/sqlmap.git
+
+# 列出所有数据库
+python3 sqlmap.py -d mysql://[数据库用户名]:[密码]@[ip:端口]/[数据名] -f --banner -dbs
+
+# dump数据库
+python3 sqlmap.py -d mysql://[数据库用户名]:[密码]@[ip:端口]/[数据名] -f --banner --dump qdpm
