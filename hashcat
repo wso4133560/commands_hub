@@ -1,0 +1,2 @@
+# hashcat用于暴力匹配密码
+hashcat --stdout pass.txt -r /usr/share/hashcat/rules/best64.rule > passlist.txt
