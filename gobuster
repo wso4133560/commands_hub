@@ -1,0 +1,2 @@
+# 使用SecList里面的库扫描
+gobuster dir -w /usr/share/seclists/Discovery/Web-Content/CommonBackdoors-PHP.fuzz.txt -x .php -u http://redrocks.win/ -o dir80.txt -z
