@@ -1,0 +1,2 @@
+# strings命令用于在二进制文件中查找并打印可打印字符组成的字符串
+strings [OPTIONS] FILENAME
