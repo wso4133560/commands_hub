@@ -120,3 +120,6 @@ int main() {
 
   return 0;
 }
+
+# 打印DAG流图的做法
+MF.print(errs());
