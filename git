@@ -100,3 +100,5 @@ find .git/refs/
 # git 看日志的方法
 git log --oneline
 
+# git 查查看日志提交记录
+git log -n 3 --patch
