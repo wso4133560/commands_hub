@@ -102,3 +102,6 @@ git log --oneline
 
 # git 查查看日志提交记录
 git log -n 3 --patch
+
+# 撤销add
+git reset
