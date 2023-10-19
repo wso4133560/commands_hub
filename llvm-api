@@ -123,3 +123,21 @@ int main() {
 
 # 打印DAG流图的做法
 MF.print(errs());
+
+这些参数是用于描述SelectionDAG节点属性的枚举值。下面是每个参数的含义：
+
+- SDNPCommutative：表示节点是可交换的，即操作数的顺序不影响结果。
+- SDNPAssociative：表示节点是可结合的，即操作数的结合方式不影响结果。
+- SDNPHasChain：表示节点具有链操作数，用于描述节点之间的依赖关系。
+- SDNPOutGlue：表示节点具有输出粘合剂，用于描述节点的输出与其他节点的连接。
+- SDNPInGlue：表示节点具有输入粘合剂，用于描述节点的输入与其他节点的连接。
+- SDNPOptInGlue：表示节点具有可选输入粘合剂，用于描述节点的可选输入与其他节点的连接。
+- SDNPMayLoad：表示节点可能会加载内存。
+- SDNPMayStore：表示节点可能会存储到内存。
+- SDNPSideEffect：表示节点具有副作用，即节点执行可能会影响程序状态。
+- SDNPMemOperand：表示节点涉及内存操作，并且需要一个描述访存的内存操作数。
+- SDNPVariadic：表示节点具有可变数量的操作数。
+- SDNPWantRoot：表示节点希望成为根节点。
+- SDNPWantParent：表示节点希望成为父节点。
+
+这些属性用于描述SelectionDAG中的节点，以便在代码生成过程中进行优化和转换。
