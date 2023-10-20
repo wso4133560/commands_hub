@@ -50,6 +50,3 @@ llvm-nm -g [*.o]
 
 # 提取bc文件中的函数
 llvm-extract -func-list=function_list.txt output.bc -o 3.bc
-
-# built函数的实现地点
-/home/icube/work/llvm-source/llvm-7.0.0/mvp_misc/mvp_functions.c
