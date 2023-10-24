@@ -26,3 +26,7 @@ __builtin_return_address
 
 # 查看gcc预定义宏
 gcc -dM -E - < /dev/null
+
+# 编译器生成一个裸函数(需要声明后使用)
+__attribute__((naked))
+void  myNakedFunction() __attribute__((naked));
