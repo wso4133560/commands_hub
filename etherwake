@@ -1,2 +1,4 @@
 # 通过mac地址远程启动电脑
 etherwake -i br-lan 2a:52:6f:04:10:17
+
+https://www.cnblogs.com/jzgw/p/wol_Wkae-on_Ubuntu.html
