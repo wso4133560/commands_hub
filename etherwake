@@ -1,0 +1,2 @@
+# 通过mac地址远程启动电脑
+etherwake -i br-lan 2a:52:6f:04:10:17
