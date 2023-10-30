@@ -6,3 +6,6 @@ ethtool -i [网卡]
 
 # 查看网卡队列
 ethtool -S [网卡]
+
+# 启动网卡监听状态
+ethtool -s [网卡] wol g
