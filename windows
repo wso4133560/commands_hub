@@ -15,3 +15,6 @@ cls
 
 # 传输文件
 robocopy .\model\ \\192.168.1.196\pyporch-model /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+
+# wsl粘入剪贴板
+cat log.txt | clip.exe
