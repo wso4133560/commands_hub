@@ -2,3 +2,26 @@
 etherwake -i br-lan 2a:52:6f:04:10:17
 
 https://www.cnblogs.com/jzgw/p/wol_Wkae-on_Ubuntu.html
+创建一个WOL开机进程
+
+sudo nano /etc/systemd/system/wol.service
+写入内容
+
+[Unit]
+Description=Configure Wake On LAN
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ethtool -s INTERFACE wol g
+
+[Install]
+WantedBy=basic.target
+使systemd知道新的WOL脚本
+
+sudo systemctl daemon-reload
+使能WOL脚本
+
+sudo systemctl enable wol.service
+启用WOL脚本
+
+sudo systemctl start wol.service
