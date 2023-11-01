@@ -105,3 +105,6 @@ git log -n 3 --patch
 
 # 撤销add
 git reset
+
+# 查看日志的提交差异
+git show [hash_id]
