@@ -108,3 +108,6 @@ git reset
 
 # 查看日志的提交差异
 git show [hash_id]
+
+# 切换某个文件恢复到某个版本的具体操作
+git checkout <commit-hash> -- <file-path>
