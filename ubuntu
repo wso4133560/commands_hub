@@ -1,0 +1,18 @@
+# 关闭apt和dpkg自动更新
+# 修改以下文件
+sudo vim /etc/apt/apt.conf.d/10periodic
+sudo vim /etc/apt/apt.conf.d/20auto-upgrades
+
+#关闭自动更新
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Download-Upgradeable-Packages "0";
+APT::Periodic::AutocleanInterval "0";
+APT::Periodic::Unattended-Upgrade "0";
+
+#开启自动更新
+APT::Periodic::Update-Package-Lists "2";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::AutocleanInterval "0";
+APT::Periodic::Unattended-Upgrade "1";
+
+
