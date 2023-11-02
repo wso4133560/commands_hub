@@ -1,3 +1,5 @@
+# 在搭建openvpn服务端之前需要先保证有tun接口
+https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bdae.html
 # openvpn服务端一键搭建脚本
 https://github.com/hwdsl2/openvpn-install/blob/master/README-zh.md
 
