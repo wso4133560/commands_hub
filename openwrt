@@ -22,15 +22,14 @@ config redirect
 /etc/init.d/firewall reload
 
 
-# 添加tun接口
+# 接口配置文件位置
 vim /etc/config/network
-config interface 'tun'
-    option ifname 'tun0'
-    option proto 'none'
-    option auto '1'
 
 /etc/init.d/network restart
 
+# 添加tun接口
+ip tuntap add dev tun0 mode tun
+ip link set tun0 up
 ip link set tun0 up
 
 https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bdae.html
