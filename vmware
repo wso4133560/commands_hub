@@ -1,0 +1,7 @@
+# 安装扩展命令
+sudo apt install open-vm-tools open-vm-tools-desktop
+
+# 查看是否共享windows的命令
+vmware-hgfsclient
+
+
