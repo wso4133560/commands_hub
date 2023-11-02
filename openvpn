@@ -1,9 +1,15 @@
-# 在搭建openvpn服务端之前需要先保证有tun接口
+# 使用一键安装脚之前一定要先安装tun接口
 https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bdae.html
-# openvpn服务端一键搭建脚本
-https://github.com/hwdsl2/openvpn-install/blob/master/README-zh.md
+# 一键安装的脚本
+https://github.com/Nyr/openvpn-install
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+# 演示安装方法
+https://www.freedidi.com/2694.html
 
+# 下面是一步步安装的做法
 https://blog.csdn.net/wfjdemmye/article/details/131486127
+
+
 
 # 服务端
 sudo apt install openvpn libssl-dev openssl
@@ -11,5 +17,37 @@ sudo apt install openvpn libssl-dev openssl
 # 查看openvpn的版本
 openvpn --version
 
+# 安装证书相关制作
+sudo apt install easy-rsa
 
+# 制作CA证书
+sudo mkdir /etc/openvpn/easy-rsa/
+cd /etc/openvpn/easy-rsa/
+sudo cp -r /usr/share/easy-rsa/* /etc/openvpn/easy-rsa/
+cp vars.example vars
 
+# 修改证书内容
+vim vars
+修改国家，省份等内容 EASYRSA_REQ_COUNTRY
+添加export KEY_NAME="vpntlopennet"
+
+# 制作Server端证书
+./easyrsa init-pki ls
+./easyrsa build-ca nopass
+./easyrsa build-server-full vpntlopennet nopass
+
+# Server端生成的证书位置
+ls pki/issued/
+ls pki/private/
+
+# 制作Client端证书
+./easyrsa init-pki ls
+./easyrsa build-ca nopass
+./easyrsa build-client-full vpntlopennet nopass
+
+# 生成Diffie-Hellman文件
+./easyrsa gen-dh
+# 生成的文件路径
+ls pki/dh.pem -l
+
+# 放置文件路径
