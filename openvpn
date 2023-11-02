@@ -6,6 +6,9 @@ wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 # 演示安装方法
 https://www.freedidi.com/2694.html
 
+# 运行方法
+nohup /usr/sbin/openvpn --config /etc/openvpn/server/server.conf &
+
 # 下面是一步步安装的做法
 https://blog.csdn.net/wfjdemmye/article/details/131486127
 
