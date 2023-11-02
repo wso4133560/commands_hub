@@ -20,3 +20,15 @@ config redirect
         option dest_port '80'
 
 /etc/init.d/firewall reload
+
+
+# 添加tun接口
+vim /etc/config/network
+config interface 'tun'
+    option ifname 'tun0'
+    option proto 'none'
+    option auto '1'
+
+/etc/init.d/network restart
+
+ip link set tun0 up
