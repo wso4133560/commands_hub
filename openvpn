@@ -1,0 +1,10 @@
+https://blog.csdn.net/wfjdemmye/article/details/131486127
+
+# 服务端
+sudo apt install openvpn libssl-dev openssl
+
+# 查看openvpn的版本
+openvpn --version
+
+
+
