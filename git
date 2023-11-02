@@ -111,3 +111,6 @@ git show [hash_id]
 
 # 切换某个文件恢复到某个版本的具体操作
 git checkout <commit-hash> -- <file-path>
+
+# 只下载某个文件或者文件夹需要按照下面谷歌插件
+gitzip for github
