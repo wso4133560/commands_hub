@@ -4,4 +4,5 @@ sudo apt install open-vm-tools open-vm-tools-desktop
 # 查看是否共享windows的命令
 vmware-hgfsclient
 
-
+# 挂载代码
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
