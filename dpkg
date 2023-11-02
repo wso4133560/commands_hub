@@ -28,4 +28,5 @@ dpkg -b [文件夹]
 # debian系列打包
 sudo dpkg-buildpackage -us -uc -nc
 
-
+# 查看安装某个包时产生的文件
+dpkg --list [包名]
