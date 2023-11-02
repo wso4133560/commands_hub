@@ -33,3 +33,7 @@ ip link set tun0 up
 ip link set tun0 up
 
 https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bdae.html
+
+# 容器里面
+apt install git vim wget systemd iproute2
+
