@@ -8,4 +8,15 @@ https://www.youtube.com/watch?v=mKmqou7o7gM
 # v2raya的安装网址
 https://v2raya.org/en/docs/prologue/installation/openwrt/
 
+# 命令修改端口映射
+vim /etc/config/firewall
+config redirect                                 
+        option dest 'lan'                       
+        option target 'DNAT'                    
+        option name 'ssh'                       
+        option src 'wan'                        
+        option src_dport '33333'                
+        option dest_ip '192.168.100.1'          
+        option dest_port '80'
 
+/etc/init.d/firewall reload
