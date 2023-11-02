@@ -1,0 +1,23 @@
+# 限定关键词
+""
+
+# 限定标题
+intitle:
+
+# 限定标题多个关键词
+allintitle:
+
+# 限定内容关键词
+intext:
+
+# 限定网址关键词
+inurl:
+
+# 限定网址来源
+site:
+
+# 限定图片尺寸
+imagesize:
+
+# 限定文件格式
+filetype:
