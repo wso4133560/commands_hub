@@ -1,3 +1,6 @@
+# 启用docker的vpn
+https://hub.docker.com/r/alekslitvinenk/openvpn/
+
 # 使用一键安装脚之前一定要先安装tun接口
 https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bdae.html
 # 一键安装的脚本
