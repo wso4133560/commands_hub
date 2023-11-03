@@ -3,3 +3,6 @@ tcpdump -i [网卡]
 
 # 抓包输出文件
 tcpdump [协议类型] -t -s 0 -w [target.cap]
+
+# 抓udp的包
+tcpdump -i [网口] udp port 1194
