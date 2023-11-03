@@ -1,3 +1,8 @@
+# ipk包路径
+https://github.com/v2rayA/v2raya-openwrt/releases
+# 下面两个文件放到/usr/share/v2ray下
+geosite.dat geoip.dat
+
 # 服务器和客户端的配置
 https://toutyrater.github.io/basic/vmess.html
 
