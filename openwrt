@@ -38,3 +38,19 @@ https://wallsee.org/2016/05/16/openwrt-openvpn-server-tune6a8a1e5bc8fe9858de7bda
 # 容器里面
 apt install git vim wget systemd iproute2
 
+# 定时脚本
+#!/bin/bash
+HOST="www.baidu.com"
+
+for i in $(seq 1 10)
+do
+ping -c 3 $HOST > /dev/null
+if [ $? -eq 0 ]
+then
+    break
+else
+    ifconfig eth0 down
+    ifconfig eth0 up
+    sleep 30
+fi
+done
