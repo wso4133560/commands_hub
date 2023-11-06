@@ -57,3 +57,9 @@ ls pki/private/
 ls pki/dh.pem -l
 
 # 放置文件路径
+
+
+
+# 遇到错误时候All tap-windows6 adapters on this system are currently in use or disabled. 
+https://blog.51cto.com/runcx/2634172
+需要在安装的过程中点击选择TAP Virtual Ethernet Adapter
