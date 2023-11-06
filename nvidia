@@ -1,0 +1,4 @@
+# ubuntu安装驱动
+1. ubuntu-drivers devices
+2. 根据显示的驱动apt install 
+3. reboot
