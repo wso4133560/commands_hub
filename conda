@@ -1,0 +1,20 @@
+# conda的镜像源
+  https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+
+# 查看虚拟环境列表
+  conda info -e
+
+# 创建虚拟环境
+  conda create -n [环境名字] python=[版本号]
+
+# 激活虚拟环境
+  conda activate [名字]
+
+# 退出虚拟环境
+  conda deactivate
+
+# 删除虚拟环境
+  conda remove -n [环境名称] -all
+
+# 复制虚拟环境
+  conda create -n [名字] --clone [名字]
