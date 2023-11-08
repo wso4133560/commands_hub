@@ -19,3 +19,7 @@ sudo apt-get install openvpn
 # 下载*.ovpn到/etc/openvpn/client/
 sudo openvpn --config /etc/openvpn/client/XXXX.ovpn --log-append /etc/openvpn/client/openvpn.log
 
+# openvpn server支持多个客户端的参数
+vim /etc/config/openvpn
+
+option duplicate_cn '1'
