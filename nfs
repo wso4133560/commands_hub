@@ -1,0 +1,33 @@
+# 安装nfs服务端
+sudo apt install nfs-kernel-server
+
+# 查看nfs服务器是否启动
+sudo systemctl status nfs-server
+
+# 创建共享目录
+sudo mkdir -p /mnt/ShareFolder
+#分配权限
+bob@ubuntu-20-04:~$ sudo chown nobody:nogroup /mnt/ShareFolder
+bob@ubuntu-20-04:~$ sudo chmod -R 777 /mnt/ShareFolder/
+
+# 编辑配置文件
+sudo vim /etc/exports 
+# 如果只允许一个客户端访问，可以只写一个客户端的IP地址
+/mnt/ShareFolder 192.168.43.131(rw,sync,no_subtree_check)
+# 如果只允许多个客户端访问，可以向如下一样写
+/mnt/ShareFolder 192.168.43.131(rw,sync,no_subtree_check)
+/mnt/ShareFolder 192.168.43.171(rw,sync,no_subtree_check)
+/mnt/ShareFolder 192.168.43.137(rw,sync,no_subtree_check)
+# 如果运行一个网段的客户端访问，可以这样写：
+/mnt/ShareFolder 192.168.43.*(rw,sync,no_subtree_check)
+或者
+/mnt/ShareFolder 192.168.43.0/24(rw,sync,no_subtree_check)
+
+# 启用共享文件夹生效
+sudo exportfs -arv
+
+# 查看是否可以看到共享目录
+showmount -e
+
+# 挂载到客户端
+mount 192.168.43.174:/mnt/ShareFolder /mnt/ClientFolder/
