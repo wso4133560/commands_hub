@@ -17,5 +17,5 @@ https://blog.51cto.com/runcx/2634172
 # 在ubuntu上安装openvpn客户端
 sudo apt-get install openvpn
 # 下载*.ovpn到/etc/openvpn/client/
-sudo openvpn --config /etc/openvpn/client/XXXX.ovpn --auth-user-pass /etc/openvpn/client/passwd --log-append /etc/openvpn/client/openvpn.log
+sudo openvpn --config /etc/openvpn/client/XXXX.ovpn --log-append /etc/openvpn/client/openvpn.log
 
