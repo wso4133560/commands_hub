@@ -1,3 +1,5 @@
+sudo apt install tightvncserver
+直接运行tightvncserver设置密码
 sudo apt install x11vnc
 
 # 带密码的命令
@@ -5,3 +7,6 @@ sudo x11vnc -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/:0 -background -s
 
 # 不带密码的命令
 sudo x11vnc -auth /var/run/lightdm/root/:0 -background -shared -display :0
+
+
+
