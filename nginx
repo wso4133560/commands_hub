@@ -17,6 +17,8 @@ systemctl status nginx.service
 /etc/nginx/nginx.conf
 
 # nginx正向代理
+https://juejin.cn/post/7195433903702671417
+
 wget https://github.com/nginx/nginx/archive/refs/tags/release-1.25.2.tar.gz
 wget https://github.com/openssl/openssl/archive/refs/tags/openssl-3.2.0-beta1.tar.gz
 wget https://github.com/chobits/ngx_http_proxy_connect_module/archive/refs/tags/v0.0.5.tar.gz
@@ -27,6 +29,7 @@ wget https://github.com/chobits/ngx_http_proxy_connect_module/archive/refs/tags/
 apt-get install libpcre3 libpcre3-dev
 
 # cd 到nginx解压后的目录
+patch -p1 < /root/ngx_http_proxy_connect_module/patch/proxy_connect_rewrite_102101.patch
 ./configure --prefix=/usr/local/nginx --add-module=/root/[ngx_http_proxy_connect_module的文件夹] --with-http_ssl_module --with-openssl=[openssl的文件夹]
 make
 make install
