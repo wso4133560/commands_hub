@@ -28,3 +28,36 @@ apt-get install libpcre3 libpcre3-dev
 
 # cd 到nginx解压后的目录
 ./configure --prefix=/usr/local/nginx --add-module=/root/[ngx_http_proxy_connect_module的文件夹] --with-http_ssl_module --with-openssl=[openssl的文件夹]
+make
+make install
+
+# nginx版本
+/usr/local/nginx/sbin/nginx -v
+# 启动nginx
+/usr/local/nginx/sbin/nginx
+
+vim /usr/local/nginx/conf/nginx.conf
+
+server {
+    listen                         80;
+
+    resolver                       8.8.8.8;
+    proxy_connect;
+    proxy_connect_allow            443 563;
+    proxy_connect_connect_timeout  10s;
+    proxy_connect_data_timeout     10s;
+    location / {
+        proxy_pass http://$host;
+        proxy_set_header Host $host;
+    }
+}
+
+
+# 测试正向代理是否生效
+# 服务器上测试
+curl -x http://127.0.0.1:80 -L https://www.baidu.com
+curl -x http://127.0.0.1:80 -L http://www.baidu.com
+
+# 本机测试
+curl -x http://47.245.30.201:80 -L http://www.baidu.com
+curl -x http://47.245.30.201:80 -L https://www.baidu.com
