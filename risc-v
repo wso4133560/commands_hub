@@ -1,2 +1,10 @@
 # 在x86上跑risc-v的完整ubuntu系统
 https://tinylab.org/run-riscv-ubuntu-over-x86/
+
+
+$ git clone https://gitee.com/tinylab/cloud-lab.git
+$ cd cloud-lab
+$ tools/docker/run riscv-lab
+
+# 重启容器
+$ tools/docker/rerun riscv-lab
