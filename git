@@ -114,3 +114,8 @@ git checkout <commit-hash> -- <file-path>
 
 # 只下载某个文件或者文件夹需要按照下面谷歌插件
 gitzip for github
+
+# 下载huggingface上的命令
+sudo apt install git-lfs
+git lfs install
+git clone https://huggingface.co/[项目名]
