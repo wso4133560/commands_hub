@@ -32,3 +32,7 @@ sudo mount -o loop [iso文件] [文件夹]
 
 # mount将另一个文件夹挂载到当前文件夹
 mount --bind [olddir] [newdir]
+
+# mount samba文件夹
+sudo mount -t cifs //ip/[文件夹] [文件夹]
+
