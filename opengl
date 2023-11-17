@@ -1,4 +1,4 @@
 # 从ubuntu官网获取到mesa的官方代码
 apt source libegl1-mesa
 
-sudo apt install libegl1-mesa-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+sudo apt install libegl1-mesa-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev libglfw3-dev
