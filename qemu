@@ -16,4 +16,5 @@ qemu-img resize $img +50G
 
 # 查看当前tap列表
 ip tuntap list
-qemu-system-x86_64 -m 8192 -smp 8 -drive if=virtio,file=$image --enable-kvm -net nic,model=e1000 -net tap --nographic
+qemu-system-x86_64 -m 8192 -smp 8 -drive if=virtio,file=$image --enable-kvm -net nic,model=e1000 -net user --nographic
+sudo dhclient
