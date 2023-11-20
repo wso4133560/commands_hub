@@ -20,3 +20,6 @@ sudo dpkg-reconfigure unattended-upgrades
 
 # ubuntu的rootfs的路径
 http://cdimage.ubuntu.com/ubuntu-base/releases/
+
+# ubuntu的qemu下载路径
+https://cloud-images.ubuntu.com/buildd/daily/jammy/current/
