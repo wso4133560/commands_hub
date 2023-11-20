@@ -23,3 +23,5 @@ http://cdimage.ubuntu.com/ubuntu-base/releases/
 
 # ubuntu的qemu下载路径
 https://cloud-images.ubuntu.com/buildd/daily/jammy/current/
+# 重置账户密码登录
+virt-customize -a jammy-server-cloudimg-amd64.my.img --root-password password:123456
