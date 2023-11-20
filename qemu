@@ -13,3 +13,5 @@ sudo virt-install --check path_in_use=off --virt-type kvm --name [新的virsh虚
 
 # 扩容img文件使用下面命令给img文件追加50G空间：
 qemu-img resize $img +50G
+
+qemu-system-x86-64 -m 8192 -smp8 -drive if=virtio,file=$image --enable-kvm -net nic,model=e1000,mcaddr=DE:AD:AB:BF:77:99 -net tap
