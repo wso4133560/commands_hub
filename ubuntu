@@ -19,6 +19,7 @@ APT::Periodic::Unattended-Upgrade "1";
 sudo dpkg-reconfigure unattended-upgrades
 
 # ubuntu的rootfs的路径
+sudo apt install guestfs-tools
 http://cdimage.ubuntu.com/ubuntu-base/releases/
 
 # ubuntu的qemu下载路径
