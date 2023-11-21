@@ -1,0 +1,9 @@
+# 安装ts
+npm install tsc
+
+# 编译ts文件到js
+tsc [*.ts文件]
+
+# 生成自动化编译文件
+tsc --init
+后续会生成tsconfig.config 文件
