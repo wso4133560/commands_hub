@@ -2,3 +2,6 @@
 1. ubuntu-drivers devices
 2. 根据显示的驱动apt install 
 3. reboot
+
+# 下载toolkit的网站
+https://developer.nvidia.com/cuda-12-2-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
