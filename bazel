@@ -5,3 +5,9 @@ sudo mv bazel-archive-keyring.gpg /usr/share/keyrings
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 
 sudo apt update && sudo apt install bazel
+
+# 限制内存大小
+bazel build --local_ram_resources=2048 //path/to/target
+
+# 限制CPU使用率
+bazel build --local_cpu_resources=2 //path/to/target
