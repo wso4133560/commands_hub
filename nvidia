@@ -5,3 +5,6 @@
 
 # 下载toolkit的网站
 https://developer.nvidia.com/cuda-12-2-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
+
+# 安装nvcc
+sudo apt install nvidia-cuda-toolkit
