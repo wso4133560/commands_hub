@@ -1,0 +1,5 @@
+# 编译参数
+https://mlir.llvm.org/getting_started/
+
+# toy的导航
+https://mlir.llvm.org/docs/Tutorials/Toy/
