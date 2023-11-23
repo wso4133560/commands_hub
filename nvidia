@@ -17,3 +17,6 @@ https://developer.nvidia.com/cuda-12-2-0-download-archive?target_os=Linux&target
 
 # cudnn下载路径
 https://developer.nvidia.com/cudnn
+
+# 安装后添加公钥的命令
+sudo cp /var/cudnn-local-repo-ubuntu2204-8.9.6.50/cudnn-local-1998375D-keyring.gpg /usr/share/keyrings/
