@@ -3,3 +3,6 @@ nvcc [*.cu] -o [二进制文件]
 
 # 反汇编命令
 cuobjdump -sass [二进制文件]
+
+# 安装监控工具
+sudo apt install nvtop
