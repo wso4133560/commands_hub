@@ -6,3 +6,6 @@ cuobjdump -sass [二进制文件]
 
 # 安装监控工具
 sudo apt install nvtop
+
+# 安装cuda的库
+sudo apt install cudnn
