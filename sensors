@@ -1,0 +1,5 @@
+# 检测CPU/GPU的温度
+sudo apt-get update
+sudo apt-get install lm-sensors
+sudo sensors-detect
+sensors
