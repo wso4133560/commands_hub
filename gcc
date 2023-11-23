@@ -30,3 +30,10 @@ gcc -dM -E - < /dev/null
 # 编译器生成一个裸函数(需要声明后使用)
 __attribute__((naked))
 void  myNakedFunction() __attribute__((naked));
+
+# gcc更换版本命令的操作
+sudo apt install gcc-10 g++-10
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++ 
