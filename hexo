@@ -63,3 +63,4 @@ hexo.config.server = Object.assign({
 }, hexo.config.server);
 
 
+hexo server -i 0.0.0.0 -p 4001
