@@ -8,3 +8,5 @@ cd blog
 npm install
 hexo server
 
+# 部署开发到git的命令
+npm install hexo-deployer-git --save
