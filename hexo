@@ -8,5 +8,29 @@ cd blog
 npm install
 hexo server
 
-# 部署开发到git的命令
-npm install hexo-deployer-git --save
+
+
+Step2. 修改 _config.yml 檔案的 Deployment 設定
+接著是修改 _config.yml 設定檔中，有關 deploy 的設定。
+
+需注意這裡指的 _config.yml 檔案是根目錄的，而不是 themes 主題中的。
+
+deploy:
+  type: git
+  repo: https://github.com/username/username.github.io.git
+  branch: master
+type：選擇部屬模式，這裡填 git
+repo：GitHub repository 的連結，記得將 username 修改成自己的帳號名稱
+branch：選擇分支，預設為 master
+
+
+Step3. 輸入部署指令
+使用下列指令即可部署檔案到網站上，第一次輸入可能會要求登入 GitHub 帳號：
+
+$ hexo deploy
+通常在完成每次修改後，會依序輸入 clean -> generate -> deploy 三行指令，避免更新不完全：
+
+$ hexo cl    // 清除之前建立的靜態檔案
+$ hexo g     // 建立靜態頁面
+$ hexo d     // 部署至 GitHub
+或是合併第二、三行指令：hexo g -d 即可在產生靜態頁面後立刻部署。
