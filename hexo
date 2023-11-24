@@ -35,3 +35,31 @@ $ hexo cl    // 清除之前建立的靜態檔案
 $ hexo g     // 建立靜態頁面
 $ hexo d     // 部署至 GitHub
 或是合併第二、三行指令：hexo g -d 即可在產生靜態頁面後立刻部署。
+
+
+1.修改package.json
+
+在server命令中添加 -p 端口号 配置。 这时启动hexo就不能再用 hexo server 命令了，而是使用npm run server启动。这样端口号就改成4001了。
+
+"scripts": {
+ "build": "hexo generate",
+ "clean": "hexo clean",
+ "deploy": "hexo deploy",
+ "server": "hexo server -p 4001"
+},
+
+2.修改启动文件
+
+hexo的启动文件地址node_modules\hexo-server\index.js 修改port即可。
+我这里把port改成了4001。这样再执行hexo server的时候，端口号就变成了4001
+
+hexo.config.server = Object.assign({
+ port: 4001,
+ log: false,
+ // `undefined` uses Node's default (try `::` with fallback to `0.0.0.0`)
+ ip: undefined,
+ compress: false,
+ header: true
+}, hexo.config.server);
+
+
