@@ -1,0 +1,10 @@
+# hexo 构建一个惊天页面的博客网站
+https://hexo.io/zh-cn/
+
+# 初始化命令
+npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server
+
