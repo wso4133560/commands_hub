@@ -8,7 +8,8 @@ cd blog
 npm install
 hexo server
 
-
+# 安装git插件
+npm install hexo-deployer-git --save
 
 Step2. 修改 _config.yml 檔案的 Deployment 設定
 接著是修改 _config.yml 設定檔中，有關 deploy 的設定。
