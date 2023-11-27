@@ -51,7 +51,86 @@ function dockershow() {
 
 function gitshow() {
   echo 'git命令手册!'
-  
+  echo "git下载提交命令[1]"
+  echo "git管理分支命令[2]"
+  echo "git对文件的管理命令[3]"
+  echo "git查看日志的命令[4]"
+  echo "环境变量管理命令[5]"
+  read -p "请选择[1-5]:" num
+
+  if [ "$num" == "1" ]
+  then
+    echo '# 克隆项目: '
+    echo 'git clone [url]: '
+    echo '# 克隆到某个路径下: '
+    echo 'git clone [url] [path]'
+    echo '克隆某个分支: '
+    echo 'git clone [url] -b [分支]'
+    echo '# 下载包含所有子模块: '
+    echo 'git submodule update --init --recursive'
+    echo '# 提交代码: '
+    echo 'git add [文件]'
+    echo 'git commit -m "fix: 日志"'
+    echo 'git push'
+    echo '# 使用令牌环下载: '
+    git pull https://[Personal Access Token]@[url]
+    echo '# 使用令牌环提交: '
+    git push https://[Personal Access Token]@[url]
+    echo '# gerrit提交: '
+    echo '需要将commit-msg拷贝到.git/hooks下并给执行权限'
+    echo 'git push origin HEAD:refs/for/develop/[项目名]'
+  elif [ "$num" == "2" ]
+  then
+    echo '# 查看所有分支的命令: '
+    echo 'git branch -a'
+    echo '# 删除所有分支的命令: '
+    echo 'git branch -d [分支]'
+    echo '切换分支: '
+    echo 'git checkout [分支]'
+    echo '切换远程分支: '
+    echo 'git checkout -b 本地分支名 origin/远程分支名'
+  elif [ "$num" == "3" ]
+  then
+    echo '# 添加文件的命令: '
+    echo 'git add [文件]'
+    echo '# 删除文件的命令: '
+    echo 'git rm -f [文件]'
+    echo '# 修改名字: '
+    echo '1) git mv --force [src name] [dst name]'
+    echo '2) git add [name]'
+    echo '3) git commit –m "rename"'
+    echo '4) git push'
+    echo '# git恢复成某个版本: '
+    echo 'git reset --hard [hash值]'
+    echo '# 修改提交的信息 追加提交内容: '
+    echo 'git commit --amend'
+    echo '# 撤销commit: '
+    echo 'git reset --soft HEAD^'
+    echo '# 撤销add: '
+    echo 'git reset'
+    echo '# 某个文件恢复到某个版本的具体操作'
+    echo 'git checkout <commit-hash> -- <file-path>'
+  elif [ "$num" == "4" ]
+  then
+    echo "# git查看简略日志报告: "
+    echo "git log --oneline"
+    echo "# 查看日志提交记录的diff: "
+    echo "git log -n [最近几次] --patch"
+    echo "# 查看某次提交日志的diff: "
+    echo "git show [日志hash]"
+  elif [ "$num" == "5" ]
+  then
+    echo '# 查看所有的git环境变量: '
+    echo 'git config --global -l'
+    echo '# git查看当前项目的链接: '
+    echo 'git remove -v'
+    echo '# 查看代理: '
+    echo 'git config --global --get http.proxy'
+    echo 'git config --global --get https.proxy'
+    echo '# 设置代理: '
+    echo 'git config --global http.proxy http://[ip]:[端口]'
+    echo 'git config --global https.proxy https://[ip]:[端口]'
+  else
+    echo "错误的选项"
+  fi
 }
-
-
