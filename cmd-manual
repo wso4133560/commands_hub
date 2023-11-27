@@ -1,0 +1,57 @@
+#!/bin/bash
+# 这个是命令手册 将其浓缩归纳到function方便命令方式查看
+
+function dockershow() {
+  echo "docker命令手册！"
+  echo "管理dodcker镜像的命令[1]"
+  echo "管理docker容器的命令[2]"
+  echo "docker容器启动命令[3]"
+  echo "打包docker的命令[4]"
+  read -p "请选择[1-4]:" num
+
+  if [ "$num" == "1" ]
+  then
+    echo 'docker image ls           # 查看镜像信息'
+    echo 'docker pull [镜像]        # 下载镜像'
+    echo 'docker rmi [镜像]         # 删除镜像'
+  elif [ "$num" == "2" ]
+  then
+    echo 'docker ps                 # 查看进程'
+    echo 'docker ps -a              # 查看所有进程'
+    echo 'docker start [容器]       # 启动容器'
+    echo 'docker stop [容器]        # 关闭容器'
+    echo 'docker restart [容器]     # 重启容器'
+    echo 'docker attach [容器]      # 临时进入容器'
+    echo 'docker rm [容器]          # 删除容器'
+  elif [ "$num" == "3" ]
+  then
+    echo '# 后台启动容器: '
+    echo 'docker run -d -it [镜像] /bin/bash'
+    echo '# 临时启动容器: '
+    echo 'docker run –rm -it [镜像] bash'
+    echo '# 后台端口映射示例: '
+    echo 'docker run -p [宿主机端口]:[端口] -d -it [镜像] /bin/bash'
+    echo '# docker的网络模式: '
+    echo 'docker run –net=none –rm -it [镜像] bash'
+    echo 'docker run –net=host –rm -it [镜像] bash'
+    echo 'docker run –net=bridge –rm -it [镜像] bash'
+    echo 'docker run –net=container:[进程] –rm -it [镜像] bash'
+    echo '# docker映射文件夹: '
+    echo 'docker run -d -it -v [宿主机路径]:[docker路径] [镜像ID] /bin/bash'
+    echo '# 特权指令运行'
+    echo 'sudo docker run -it –privileged –net=host –security-opt seccomp=unconfined 39f5d02545a9 /bin/bash'
+  elif [ "$num" == "4" ]
+  then
+    echo 'docker export [容器ID] > [*.tar]                      # 导出镜像到tar文件'
+    echo 'docker import [tar包] [镜像名字]                       # 将tar包生成镜像'
+  else
+    echo "错误的选项"
+  fi
+}
+
+function gitshow() {
+  echo 'git命令手册!'
+  
+}
+
+
