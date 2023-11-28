@@ -1,6 +1,12 @@
 
 
-sudo apt-get install libgtest-dev libgmock-dev
+sudo apt-get install libgtest-dev libgmock-dev verilator
 
 
 set(BACKTRACE_ON_SEGFAULT OFF)
+# 功能仿真
+set(USE_VTA_FSIM ON)
+# cycle-accurate仿真，依赖于verilator和 chisel 
+set(USE_VTA_TSIM ON)
+# VTA FPGA driver,pynq设备端编译使用
+set(USE_VTA_FPGA ON)
