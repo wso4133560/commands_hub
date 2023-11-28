@@ -2,3 +2,5 @@
 
 sudo apt-get install libgtest-dev libgmock-dev
 
+
+set(BACKTRACE_ON_SEGFAULT OFF)
