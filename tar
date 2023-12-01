@@ -12,3 +12,10 @@ tar -xvJf [*.tar.xz]
 
 # 解压tar.bz2文件
 tar jxvf [FileName.tar.bz2]
+
+# 多线程压缩命令
+sudo apt-get install pigz
+pigz -p <number_of_threads> <input_file>
+
+# 多线程解压命令
+pigz -d <input_file.gz>
