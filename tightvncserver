@@ -16,6 +16,7 @@ xsetroot -solid grey
 vncconfig -iconic &
 gnome-terminal &    
 nautilus &   
+gnome-panel &
 gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
 
 # 启动vncserver
