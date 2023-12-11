@@ -1,0 +1,25 @@
+# 安装tightvncserver
+sudo apt install tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+# 启动tightvncserver的配置文件
+vim ~/.vnc/xstartup
+#!/bin/sh                                                                       
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export XKL_XMODMAP_DISABLE=1
+export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
+export XDG_MENU_PREFIX="gnome-flashback-"
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+vncconfig -iconic &
+gnome-terminal &    
+nautilus &   
+gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
+
+# 启动vncserver
+tightvncserver
+
+# 删除有的桌面
+tightvncserver -kill :1
