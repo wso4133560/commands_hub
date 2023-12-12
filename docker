@@ -92,3 +92,6 @@ passwd
 
 # 当在Docker容器中看到 "init system (PID 1). Can't operate" 错误时，通常是因为容器内部没有正在运行的 init 进程，而 init 进程是 Linux 系统中的第一个进程，负责启动和管理其他进程。
 --init
+
+# docker查看进程详细信息的命令
+docker inspect [进程ID]
