@@ -99,3 +99,5 @@ docker inspect [进程ID]
 # docker使用宿主机的命令参数
 --gpus all
 sudo apt install nvidia-container-runtime
+sudo systemctl restart docker
+sudo docker run --name ubuntu20.04 --gpus all --privileged --net=host -d -it 83a4bf3bb050
