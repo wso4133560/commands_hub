@@ -14,7 +14,7 @@
   conda deactivate
 
 # 删除虚拟环境
-  conda remove -n [环境名称] -all
+  conda remove -n [环境名称] --all
 
 # 复制虚拟环境
   conda create -n [名字] --clone [名字]
