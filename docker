@@ -98,3 +98,4 @@ docker inspect [进程ID]
 
 # docker使用宿主机的命令参数
 --gpus all
+sudo apt install nvidia-container-runtime
