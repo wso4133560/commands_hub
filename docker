@@ -104,3 +104,6 @@ sudo docker run --name ubuntu20.04 --gpus all --privileged --net=host -d -it 83a
 
 # 容器如果意外被关闭都能够自动重启的参数
 --restart=always
+
+# 可以跑systemd的docker
+https://github.com/robertdebock/docker-ubuntu-systemd
