@@ -101,3 +101,6 @@ docker inspect [进程ID]
 sudo apt install nvidia-container-runtime
 sudo systemctl restart docker
 sudo docker run --name ubuntu20.04 --gpus all --privileged --net=host -d -it 83a4bf3bb050
+
+# 容器如果意外被关闭都能够自动重启的参数
+--restart=always
