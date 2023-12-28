@@ -31,3 +31,6 @@ sudo dpkg-buildpackage -us -uc -nc
 # 查看安装某个包时产生的文件
 dpkg --list [包名]
 dpkg -L [包名] | more
+
+# 查看哪个包出错的命令
+sudo dpkg --configure -a
