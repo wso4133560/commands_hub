@@ -79,3 +79,5 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
+# cmake生成编译参数的变量
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
