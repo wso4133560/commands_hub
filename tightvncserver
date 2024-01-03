@@ -29,7 +29,7 @@ tightvncserver -kill :1
 ############## 使用xfce4桌面
 sudo apt update
 sudo apt install xfce4 xfce4-goodies
-sudo apt install tightvncserver
+sudo apt install tightvncserver xubuntu-desktop
 vncserver
 
 vim ~/.vnc/xstartup
