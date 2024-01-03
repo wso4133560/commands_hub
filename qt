@@ -1,0 +1,4 @@
+# 查看调试信息
+export QT_DEBUG_PLUGINS=1
+
+
