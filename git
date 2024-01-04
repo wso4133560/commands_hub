@@ -119,3 +119,6 @@ gitzip for github
 sudo apt install git-lfs
 git lfs install
 git clone https://huggingface.co/[项目名]
+
+# 通过界面查看日志信息
+gitk
