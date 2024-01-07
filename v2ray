@@ -68,3 +68,40 @@ https://toutyrater.github.io/basic/vmess.html
     }
   ]
 }
+
+## v2ray服务器搭建
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+
+## 卸载命令
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+
+## server的config
+{
+  "inbounds": [
+    {
+      "port": 8388, 
+      "protocol": "vmess",    
+      "settings": {
+        "clients": [
+          {
+            "id": "af41686b-cb85-494a-a554-eeaa1514bca7",  
+            "alterId": 0
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",  
+      "settings": {}
+    }
+  ]
+}
+
+systemctl restart v2ray
+## 客户端填写
+选择vmess
+添加ip
+添加用户ID
+添加端口
