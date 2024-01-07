@@ -1,0 +1,14 @@
+# 安装软件
+apt install tinyproxy
+
+vim /etc/tinyproxy/tinyproxy.conf
+
+默认端口8888
+Port 8888
+
+# XTinyProxy选项
+如果开启这个选项将会告服务器本地IP
+
+# 修改ViaProxyName字段
+
+# 开启DisableViaHeader选项将会进入隐身模式
