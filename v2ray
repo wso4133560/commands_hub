@@ -75,6 +75,9 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 ## 卸载命令
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 
+## vim 配置文件
+/usr/local/etc/v2ray/config.json
+
 ## server的config
 {
   "inbounds": [
