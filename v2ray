@@ -82,7 +82,7 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 {
   "inbounds": [
     {
-      "port": 8388, 
+      "port": 3690, 
       "protocol": "vmess",    
       "settings": {
         "clients": [
