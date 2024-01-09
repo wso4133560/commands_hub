@@ -1,2 +1,5 @@
 # rust的环境安装
 curl https://sh.rustup.rs -sSf | sh
+
+# 创建一个项目的命令
+cargo new [命令名]
