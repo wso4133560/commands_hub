@@ -1,0 +1,28 @@
+# 安装
+sudo apt install googletest
+
+# 例子
+#include <gtest/gtest.h>
+
+// 一个简单的函数，用于加法运算
+int add(int a, int b) {
+    return a + b;
+}
+
+// 测试用例
+TEST(AddTest, PositiveNumbers) {
+    EXPECT_EQ(add(2, 3), 5);  // 预期结果是 5
+}
+
+TEST(AddTest, NegativeNumbers) {
+    EXPECT_EQ(add(-2, -3), -5);  // 预期结果是 -5
+}
+
+// 主函数，用于运行所有测试
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+
+g++ -o test_example test_example.cpp -lgtest -lgtest_main -pthread
+./test_example
