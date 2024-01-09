@@ -102,6 +102,8 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
   ]
 }
 
+ufw allow 3690
+
 systemctl restart v2ray
 ## 客户端填写
 选择vmess
