@@ -1,0 +1,11 @@
+blkdiscard [options] <device>
+其中 <device> 是目标块设备的路径。
+
+一些常用的选项包括：
+
+-s, --length <length>: 指定舍弃的数据长度。默认是舍弃整个设备。
+-z, --zeroout: 在舍弃操作后，填充零以确保数据无法恢复。
+-v, --verbose: 显示详细的操作信息。
+下面是一个简单的示例：
+
+sudo blkdiscard /dev/sdb
