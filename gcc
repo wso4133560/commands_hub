@@ -43,3 +43,8 @@ contrib/download_prerequisites
 
 # gcc dump出所有中间信息
 -fdump-tree-all
+
+# 画出CFG图
+gcc -fdump-tree-all-graph -c your_source_code.c
+dot -Tpng your_source_code.c.003t.gimplegraph.dot -o output_file.png
+
