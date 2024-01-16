@@ -37,3 +37,6 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++ 
+
+# gcc编译下载先决条件
+contrib/download_prerequisites
