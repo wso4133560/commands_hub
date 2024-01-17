@@ -48,3 +48,6 @@ contrib/download_prerequisites
 gcc -fdump-tree-all-graph -c your_source_code.c
 dot -Tpng your_source_code.c.003t.gimplegraph.dot -o output_file.png
 
+# ubuntu的gcc
+https://code.launchpad.net/ubuntu/+source/gcc-13
+git clone https://git.launchpad.net/ubuntu/+source/gcc-13
