@@ -14,7 +14,7 @@ export XDG_MENU_PREFIX="gnome-flashback-"
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 xsetroot -solid grey
 vncconfig -iconic &
-gnome-terminal &    
+dbus-launch gnome-terminal &    
 nautilus &   
 gnome-panel &
 gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
