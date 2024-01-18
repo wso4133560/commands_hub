@@ -31,4 +31,5 @@ virt-customize -a jammy-server-cloudimg-amd64.my.img --root-password password:12
 # 开启ubuntu自带的vnc
 sudo loginctl unlock-sessions
 sudo apt install gnome-shell-extension-manager
+安装allow locked remoted desktop插件
 gnome-control-center
