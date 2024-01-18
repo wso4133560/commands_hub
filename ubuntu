@@ -26,3 +26,9 @@ http://cdimage.ubuntu.com/ubuntu-base/releases/
 https://cloud-images.ubuntu.com/buildd/daily/jammy/current/
 # 重置账户密码登录
 virt-customize -a jammy-server-cloudimg-amd64.my.img --root-password password:123456
+
+
+# 开启ubuntu自带的vnc
+sudo loginctl unlock-sessions
+sudo apt install gnome-shell-extension-manager
+gnome-control-center
