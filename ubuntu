@@ -33,3 +33,8 @@ sudo loginctl unlock-sessions
 sudo apt install gnome-shell-extension-manager
 安装allow locked remoted desktop插件
 gnome-control-center
+
+# 解锁链接信息命令
+loginctl list-sessions
+(will give you the active sessions in your system).
+loginctl unlock-session XX
