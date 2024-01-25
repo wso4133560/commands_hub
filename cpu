@@ -1,0 +1,10 @@
+# 查看当前核心数量
+nproc
+
+# 显示当前核心频率
+sudo apt install cpufrequtils
+cpufreq-info
+
+# 给所有核心添加压力
+stress --cpu [核心数]
+  
