@@ -1,0 +1,16 @@
+# 安装命令
+sudo snap install multipass
+
+# 查找支持的Ubuntu虚拟机版本
+multipass find
+
+multipass launch -n vm01 -c 16 -m 8G -d 100G
+自定义配置创建可以参考如下方式:
+
+-n, --name: 名称
+-c, --cpus: cpu核心数, 默认: 1
+-m, --mem: 内存大小, 默认: 1G
+-d, --disk: 硬盘大小, 默认: 5G
+
+# 查看当前虚拟机列表
+multipass list
