@@ -14,3 +14,29 @@ multipass launch -n vm01 -c 16 -m 8G -d 100G
 
 # 查看当前虚拟机列表
 multipass list
+
+# 进入虚拟机
+multipass shell [虚拟机]
+
+# 查看虚拟机信息
+multipass info [虚拟机]
+
+# 挂载格式
+multipass mount 宿主机目录  实例名:虚拟机目录
+
+# 传输文件
+multipass transfer 主机文件 容器名:容器目录
+
+# 启动实例
+multipass start vm01
+# 停止实例
+multipass stop vm01
+# 删除实例（删除后，还会存在）
+multipass delete vm01
+# 释放实例（彻底删除）
+multipass purge vm01
+
+# 官方文档
+https://multipass.run/docs/
+
+
