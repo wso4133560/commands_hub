@@ -6,6 +6,8 @@ vim /etc/tinyproxy/tinyproxy.conf
 默认端口8888
 Port 8888
 
+ufw allow 8888
+
 # XTinyProxy选项
 如果开启这个选项将会告服务器本地IP
 
