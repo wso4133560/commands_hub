@@ -18,3 +18,6 @@ robocopy .\model\ \\192.168.1.196\pyporch-model /E /Z /ZB /R:5 /W:5 /TBD /NP /V 
 
 # wsl粘入剪贴板
 cat log.txt | clip.exe
+
+# 设置本地不代理
+set no_proxy=localhost, 127.0.0.1, ::1
