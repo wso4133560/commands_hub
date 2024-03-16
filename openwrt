@@ -54,3 +54,8 @@ else
     sleep 30
 fi
 done
+
+# openvpn一个整数多个客户端
+vim /etc/config/openvpn
+
+option duplicate_cn '1'
