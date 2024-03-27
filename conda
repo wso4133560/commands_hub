@@ -21,3 +21,6 @@
 
 # conda安装包名
 conda install [包]
+
+# conda找不到cuda.h的解决方法
+conda install nvidia::cuda-cudart-dev
