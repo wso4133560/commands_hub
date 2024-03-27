@@ -1,4 +1,6 @@
 # 使用python创建虚拟环境
 python3 -m venv /path/to/new/virtual/environment
 
+# 激活环境
+source /path/to/new/virtual/environment/bin/activate
 
