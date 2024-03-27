@@ -7,3 +7,5 @@ python3 -m venv /path/to/new/virtual/environment
 # 激活环境
 source /path/to/new/virtual/environment/bin/activate
 
+# python升级文章
+https://juejin.cn/post/7009172381289676836
