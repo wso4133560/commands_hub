@@ -125,3 +125,6 @@ gitk
 
 # git commit模板
 git config --global commit.template [模板路径]
+
+# git查看修改的名字
+git diff --only-name
