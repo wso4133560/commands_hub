@@ -12,3 +12,7 @@ source /path/to/new/virtual/environment/bin/activate
 
 # python升级文章
 https://juejin.cn/post/7009172381289676836
+
+# 代码中打断点
+import pdb
+pdb.set_trace()
