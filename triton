@@ -1,5 +1,6 @@
 # 直接调用函数打印
-compiled_kernel = kernel[grid](args)
+compiled = kernel[grid](args)
 print("IR", compiled.asm['ttir'])
 print("TTGIR", compiled.asm['ttgir'])
+print("LLIR", compiled.asm['llir'])
 print("PTX", compiled.asm['ptx'])
