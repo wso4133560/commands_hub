@@ -29,6 +29,4 @@ https://developer.nvidia.com/gameworksdownload#?cl=version,1
 
 # 查看系统级别的时间
 nsys profile --stats true python 05-layer-norm.py
-
-# 命令
-nsys profile -t cuda,nvtx -s none gmx mdrun -dlb no -notunepme -noconfout -nsteps 3000
+ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set full python 03-matrix-multiplication.py
