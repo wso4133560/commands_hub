@@ -27,5 +27,8 @@ sudo apt --purge remove nvidia* "*cublas*" "cuda*"
 # 性能检测工具下载链接
 https://developer.nvidia.com/gameworksdownload#?cl=version,1
 
+# 查看系统级别的时间
+nsys profile --stats true python 05-layer-norm.py
+
 # 命令
 nsys profile -t cuda,nvtx -s none gmx mdrun -dlb no -notunepme -noconfout -nsteps 3000
