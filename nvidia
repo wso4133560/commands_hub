@@ -35,6 +35,7 @@ ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set full python 03-matrix-multipl
 ncu --list-sections
 
 # 只采集roofline
+ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set roofline python 03-matrix-multiplication.py
 ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set SpeedOfLight python 03-matrix-multiplication.py
 
 ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --section SpeedOfLight --section SpeedOfLight_RooflineChart --section SpeedOfLight_HierarchicalTensorRooflineChart python 03-matrix-multiplication.py
