@@ -30,3 +30,9 @@ https://developer.nvidia.com/gameworksdownload#?cl=version,1
 # 查看系统级别的时间
 nsys profile --stats true python 05-layer-norm.py
 ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set full python 03-matrix-multiplication.py
+
+# 查看有什么参数
+ncu --list-sections
+
+# 只采集roofline
+ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set SpeedOfLight python 03-matrix-multiplication.py
