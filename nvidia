@@ -24,3 +24,8 @@ sudo cp /var/cudnn-local-repo-ubuntu2204-8.9.6.50/cudnn-local-1998375D-keyring.g
 # 卸载包
 sudo apt --purge remove nvidia* "*cublas*" "cuda*"
 
+# 性能检测工具下载链接
+https://developer.nvidia.com/gameworksdownload#?cl=version,1
+
+# 命令
+nsys profile -t cuda,nvtx -s none gmx mdrun -dlb no -notunepme -noconfout -nsteps 3000
