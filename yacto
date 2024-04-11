@@ -1,0 +1,17 @@
+# 准备环境
+sudo apt install gawk wget git-core diffstat unzip texinfo gcc-multilib
+sudo apt install build-essential chrpath socat cpio python3 python3-pip python3-pexpect 
+sudo apt install xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev 
+sudo apt install pylint3 xterm
+
+git clone git://git.yoctoproject.org/poky
+
+cd poky
+source oe-init-build-env build
+vim build/conf/local.conf
+末尾添加：
+BB_NUMBER_THREADS = "4"
+PARALLEL_MAKE = "-j64"
+
+# 构建第一个镜像
+bitbake core-image-sato
