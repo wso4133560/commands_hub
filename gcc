@@ -53,5 +53,53 @@ https://code.launchpad.net/ubuntu/+source/gcc-13
 git clone https://git.launchpad.net/ubuntu/+source/gcc-13
 https://launchpad.net/ubuntu/+source/gcc-13/13.2.0-9ubuntu1
 
+
+# 编译环境
+sudo apt-get install libgmp-dev libmpfr-dev libmpc-dev
+
+GCC的测试套件是一套组合了许多测试案例的工具，用来验证GCC编译器在各种情况下的功能和性能。GCC测试套件依赖于DejaGnu测试框架，DejaGnu则是基于TCL脚本语言。
+
+要使用GCC的测试套件，你需要遵循以下步骤：
+
+安装DejaGnu:
+GCC测试套件依赖于DejaGnu测试框架，所以你需要先安装DejaGnu。通常可以通过系统的包管理器来安装，例如在基于Debian的系统上你可以使用以下命令：
+
+sudo apt-get install dejagnu
+安装TCL:
+如果你的系统中还未安装TCL，你也需要安装TCL解释器。DejaGnu是基于TCL的，所以它是必须的。在基于Debian的系统上安装TCL的命令是：
+
+sudo apt-get install tcl
+获取GCC源码:
+GCC的测试套件包含在GCC源码包中。你可以从GCC的官方网站下载最新的源码或者通过版本控制系统（如Git）得到。
+
+git clone git://gcc.gnu.org/git/gcc.git
+编译GCC:
+在运行测试前，你需要配置和编译GCC。在源码目录中运行以下命令来配置GCC：
+
+./configure --enable-languages=c,c++
+make
+这会编译支持C和C++的GCC。你可以根据需要启用其他语言。
+
+运行测试:
+编译完成后，在GCC的源码目录中使用make来运行测试套件：
+
+make -k check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ubuntu添加安装gcc的命令
 sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa -y
