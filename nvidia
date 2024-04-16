@@ -40,4 +40,7 @@ ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --set SpeedOfLight python 03-matrix
 
 ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --section SpeedOfLight --section SpeedOfLight_RooflineChart --section SpeedOfLight_HierarchicalTensorRooflineChart python 03-matrix-multiplication.py
 
+# 锁屏命令，最大频率在 1695 MHz
+sudo nvidia-smi --lock-gpu-clocks=1695,1695
+
 
