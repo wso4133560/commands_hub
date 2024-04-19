@@ -91,15 +91,8 @@ make -k check
 
 
 
-
-
-
-
-
-
-
-
-
-
 # ubuntu添加安装gcc的命令
 sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa -y
+
+# 启用stage4的命令
+make stage4-bubble
