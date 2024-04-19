@@ -96,3 +96,5 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa -y
 
 # 启用stage4的命令
 make stage4-bubble
+
+# -fdump-tree-original-raw 可以打印 node 形式，这种形式更适合看语法树的形式，节点与 tree.def 中的定义相对应
