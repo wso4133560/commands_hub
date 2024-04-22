@@ -1,0 +1,8 @@
+# 解决访问windows文件夹的权限问题
+vim /etc/wsl.conf
+
+[automount]
+enabled = true
+root = /mnt/
+options = "metadata,umask=22,fmask=111"
+mountFsTab = true
