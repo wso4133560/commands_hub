@@ -130,4 +130,8 @@ git config --global commit.template [模板路径]
 git diff --only-name
 
 # 导出所有的log 日志
- git log --all > commit_logs.txt
+git log --all > commit_logs.txt
+
+# 添加子模块
+git submodule add -b <branch-name> <repository-url> <path-to-submodule>
+
