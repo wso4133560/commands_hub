@@ -134,6 +134,9 @@ git log --all > commit_logs.txt
 
 # 添加子模块
 git submodule add -b <branch-name> <repository-url> <path-to-submodule>
+# 同步子模块
+git submodule sync
+git submodule update --init --recursive --remote
 
 # 远程分支命令
 git remote
@@ -144,3 +147,5 @@ git push -u -f origin [branch]
 
 # 只clone多少日期后的提交
 git clone --shallow-since=2021-01-01 [URL to Git repository]
+
+
