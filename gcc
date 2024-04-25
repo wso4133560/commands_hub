@@ -102,3 +102,6 @@ make stage4-bubble
 # 解决最终输出是xgcc xg++的问题
 export CC_FOR_TARGET=aarch64-linux-gnueabi-gcc
 export CXX_FOR_TARGET=aarch64-linux-gnueabi-g++
+
+# search head command
+g++ -v -E -x c++ /dev/null
