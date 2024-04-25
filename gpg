@@ -1,0 +1,3 @@
+sudo apt install gnupg
+gpg --output file.tar --decrypt file.tar.gpg
+
