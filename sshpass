@@ -1,0 +1,5 @@
+# 安装命令
+sudo apt install sshpass
+
+# 使用挂载命令
+sshpass -p 'password' sshfs user@remote_host:/remote/directory /local/mount/point -o password_stdin
