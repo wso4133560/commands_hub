@@ -103,5 +103,6 @@ make stage4-bubble
 export CC_FOR_TARGET=aarch64-linux-gnueabi-gcc
 export CXX_FOR_TARGET=aarch64-linux-gnueabi-g++
 
-# search head command
+# g++默认搜索路径
 g++ -v -E -x c++ /dev/null
+echo | g++ -v -E -x c++ -
