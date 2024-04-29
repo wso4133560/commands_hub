@@ -106,3 +106,6 @@ export CXX_FOR_TARGET=aarch64-linux-gnueabi-g++
 # g++默认搜索路径
 g++ -v -E -x c++ /dev/null
 echo | g++ -v -E -x c++ -
+
+# gcc查看spec命令
+gcc -dumpspecs
