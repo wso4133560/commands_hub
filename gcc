@@ -109,3 +109,6 @@ echo | g++ -v -E -x c++ -
 
 # gcc查看spec命令
 gcc -dumpspecs
+
+# 可视化gcc语法树
+gcc-12 -fdump-tree-original-raw [c语言]
