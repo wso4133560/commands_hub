@@ -1,6 +1,9 @@
 # linux上映射远端机器的硬盘到本地
 sudo sshfs -o cache=yes,allow_other [账号]@[ip]:[远端的文件夹] [本地的文件夹]
 
+# 无延时同步
+sshfs -o cache=no,attr_timeout=0 [账号]@[ip]:[远端的文件夹] [本地的文件夹]
+
 # 取消挂载
 sudo fusermount -u [文件夹]
 
