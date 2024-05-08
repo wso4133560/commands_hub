@@ -1,0 +1,5 @@
+# 安装sysdig
+sudo curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | bash 
+
+# 运行系统调用
+sudo sysdig
