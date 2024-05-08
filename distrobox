@@ -1,1 +1,8 @@
+# 安装distrobox
+sudo apt install distrobox
+
+# 创建一个docker 
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04
+distrobox enter ubuntu
+
 
