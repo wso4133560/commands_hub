@@ -43,4 +43,6 @@ ncu -f -o triton_matmul_1_2048_6144.ncu-rep  --section SpeedOfLight --section Sp
 # 锁屏命令，最大频率在 1695 MHz
 sudo nvidia-smi --lock-gpu-clocks=1695,1695
 
+# before install docker action
+sudo apt install nvidia-container-toolkit
 
