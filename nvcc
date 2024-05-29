@@ -9,3 +9,6 @@ sudo apt install nvtop
 
 # 安装cuda的库
 sudo apt install cudnn
+
+# 链接多个ptx文件到一个cubin文件
+nvlink --arch=sm_75 -o linked.cubin *.ptx
