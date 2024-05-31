@@ -1,0 +1,2 @@
+# 设置oneapi的环境变量
+source /opt/intel/oneapi/setvars.sh
