@@ -1,2 +1,3 @@
 # 启动命令
-jupyter notebook --ip='0.0.0.0'
+pip3 install jupter-lab
+jupter-lab --ip='0.0.0.0'
