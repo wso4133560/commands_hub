@@ -23,3 +23,6 @@ sudo openvpn --config /etc/openvpn/client/XXXX.ovpn --log-append /etc/openvpn/cl
 vim /etc/config/openvpn
 
 option duplicate_cn '1'
+
+# 添加DNS的做法
+dhcp-option DNS 172.16.0.1
