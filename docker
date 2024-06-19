@@ -107,9 +107,11 @@ sudo docker run --name ubuntu20.04 --gpus all --privileged --net=host -d -it 83a
 
 # 可以跑systemd的docker
 https://github.com/robertdebock/docker-ubuntu-systemd
+https://github.com/AkihiroSuda/containerized-systemd
 
 # 查看docker退出的日志
 docker logs container_id
 
-# systemd docker
-https://github.com/AkihiroSuda/containerized-systemd
+# 编译Dockerfile命令
+sudo docker build -t [镜像名] .
+
