@@ -110,3 +110,6 @@ https://github.com/robertdebock/docker-ubuntu-systemd
 
 # 查看docker退出的日志
 docker logs container_id
+
+# systemd docker
+https://github.com/AkihiroSuda/containerized-systemd
