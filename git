@@ -148,4 +148,5 @@ git push -u -f origin [branch]
 # 只clone多少日期后的提交
 git clone --shallow-since=2021-01-01 [URL to Git repository]
 
-
+# checkout到具体时间
+git checkout `git rev-list -n 1 --before="2017-08-18" master`
