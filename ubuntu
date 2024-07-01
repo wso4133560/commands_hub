@@ -38,3 +38,10 @@ gnome-control-center
 loginctl list-sessions
 (will give you the active sessions in your system).
 loginctl unlock-session XX
+
+# ubuntu变成openwrt
+https://github.com/garywill/linux-router
+https://github.com/lakinduakash/linux-wifi-hotspot
+https://github.com/oblique/create_ap
+sudo apt install linux-wifi-hotspot
+sudo apt install hostapd
