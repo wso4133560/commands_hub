@@ -112,3 +112,7 @@ gcc -dumpspecs
 
 # 可视化gcc语法树
 gcc-12 -fdump-tree-original-raw [c语言]
+
+# 插桩选项
+-finstrument-functions 是 GCC（GNU Compiler Collection）提供的一个编译选项，它会使编译器在每个函数的入口和退出处插入调用特定的监视函数。这些监视函数需要由用户自己提供，允许开发者在函数执行前后执行自定义的代码，非常适合用来进行性能分析或者日志记录。
+
