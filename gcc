@@ -119,3 +119,6 @@ gcc-12 -fdump-tree-original-raw [c语言]
 # 打印gimple单条IR
 #include "gimple-pretty-print.h"
 print_gimple_stmt(stderr, stmt, 0, TDF_SLIM);
+
+# 打印block块的信息
+dump_bb(stderr, labile_bb, 0, dump_flags);
