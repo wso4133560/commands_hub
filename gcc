@@ -122,3 +122,6 @@ print_gimple_stmt(stderr, stmt, 0, TDF_SLIM);
 
 # 打印block块的信息
 dump_bb(stderr, labile_bb, 0, dump_flags);
+
+# 从gimple指针定位到其指向的block
+old_bb = gimple_bb (cs);
