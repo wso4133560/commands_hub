@@ -110,3 +110,9 @@ systemctl restart v2ray
 添加ip
 添加用户ID
 添加端口
+
+## 启动v2raya服务
+uci set v2raya.config.enabled='1'
+uci commit v2raya
+/etc/init.d/v2raya enable
+/etc/init.d/v2raya start
