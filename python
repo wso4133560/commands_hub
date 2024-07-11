@@ -1,6 +1,9 @@
 # python调试命令
 python -m pdb [python文件]
 
+# python输出整个性能
+python -m cProfile my_script.py
+
 # 安装虚拟环境
 apt install python3-virtualenv
 
