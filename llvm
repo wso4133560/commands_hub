@@ -50,3 +50,6 @@ llvm-nm -g [*.o]
 
 # 提取bc文件中的函数
 llvm-extract -func-list=function_list.txt output.bc -o 3.bc
+
+# 编译支持openmp的编译选项
+cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_ENABLE_PROJECTS="clang;lld" -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_RUNTIMES="openmp"
