@@ -81,3 +81,6 @@ execute_process(
 
 # cmake生成编译参数的变量
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+# 指定项目安装路径
+-DCMAKE_INSTALL_PREFIX=[path]
