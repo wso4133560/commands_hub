@@ -125,3 +125,6 @@ dump_bb(stderr, labile_bb, 0, dump_flags);
 
 # 从gimple指针定位到其指向的block
 old_bb = gimple_bb (cs);
+
+# 将function打印到文件中
+dump_function_to_file (tree, FILE*, dump_flags_t)
