@@ -150,3 +150,10 @@ git clone --shallow-since=2021-01-01 [URL to Git repository]
 
 # checkout到具体时间
 git checkout `git rev-list -n 1 --before="2017-08-18" master`
+
+# git提交大文件
+git lfs install
+git lfs track "*.extension"
+git add [big file]
+git commit -m
+git push
