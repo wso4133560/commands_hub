@@ -131,3 +131,6 @@ dump_function_to_file (tree, FILE*, dump_flags_t)
 
 # 打印出Gcc编译过程中使用的所有的pass
 -fdump-passes
+
+# 查看当前选项开启的pass
+ g++ -Q -O0 --help=optimizer
