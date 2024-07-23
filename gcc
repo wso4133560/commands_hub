@@ -128,3 +128,6 @@ old_bb = gimple_bb (cs);
 
 # 将function打印到文件中
 dump_function_to_file (tree, FILE*, dump_flags_t)
+
+# 打印出Gcc编译过程中使用的所有的pass
+-fdump-passes
