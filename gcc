@@ -134,3 +134,9 @@ dump_function_to_file (tree, FILE*, dump_flags_t)
 
 # 查看当前选项开启的pass
  g++ -Q -O0 --help=optimizer
+
+# 打印gcc type的用法
+get_tree_code_name(TREE_CODE(return_type))
+
+# 打印tree node函数名字
+IDENTIFIER_POINTER(DECL_NAME(decl));
