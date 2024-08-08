@@ -45,3 +45,27 @@ https://github.com/lakinduakash/linux-wifi-hotspot
 https://github.com/oblique/create_ap
 sudo apt install linux-wifi-hotspot
 sudo apt install hostapd
+
+# ubuntu安装桌面扩展软件
+sudo apt install gnome-tweaks gnome-shell-extensions -y
+
+# ubuntu创建桌面快捷方式
+cd /usr/share/applications/
+
+[Desktop Entry]
+# 文件类型 APP
+Type=Application
+# 软件版本
+Version=1.0
+# 软件名称
+Name=MyApp
+# 鼠标悬浮图标上的提示
+Comment=My funny app
+# 软件可执行文件路径
+Exec=/path/to/myapp_exec
+# 软件图标路径
+Icon=/path/to/myapp_icon
+# 是否允许软件在终端运行
+Terminal=false
+# 软件分类
+Categories=Education;Python;Development
