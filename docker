@@ -117,3 +117,14 @@ sudo docker build -t [镜像名] .
 
 # 从容器外拷贝文件到容器内，不需要容器启动
 docker cp [本地文件路径]  [容器ID]:[容器路径]
+
+# docker 安装buildx插件
+1. 打开实验室功能
+vim /etc/docker/daemon.json
+{
+  "experimental": true
+}
+2. systemctl restart docker
+3. 在这个页面下载可执行文件
+4. /usr/libexec/docker/cli-plugins 将可执行文件名改为docker-buildx
+
