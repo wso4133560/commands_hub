@@ -116,4 +116,4 @@ docker logs container_id
 sudo docker build -t [镜像名] .
 
 # 从容器外拷贝文件到容器内，不需要容器启动
-docker cp [本地文件路径]  [容器ID]::[容器路径]
+docker cp [本地文件路径]  [容器ID]:[容器路径]
