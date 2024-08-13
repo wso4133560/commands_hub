@@ -1,0 +1,14 @@
+1. 下载代码
+git clone https://github.com/microsoft/graphrag.git
+pip3 install graphrag
+2. 创建input目录
+cd graphrag && mkdir -p ./ragtest/input
+3. 放入需要索引的文件到input里面
+4. 数据初始化
+python3 -m graphrag.index --init --root ./ragtest
+5. 进入ragtest 配置.env输入api-key
+6. 配置settings.yaml设置模型
+7. graphrap pipline
+python3 -m graphrag.index --root ./ragtest
+8. 查询命令
+python3 -m graphrag.query --root ./ragtest --method global
