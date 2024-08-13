@@ -12,3 +12,6 @@ python3 -m graphrag.index --init --root ./ragtest
 python3 -m graphrag.index --root ./ragtest
 8. 查询命令
 python3 -m graphrag.query --root ./ragtest --method global
+
+如果使用通义千问等得使用下面的项目
+https://github.com/guoyao/graphrag-more
