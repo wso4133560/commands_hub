@@ -1,0 +1,4 @@
+# 提取pdf到text文本
+sudo apt-get install poppler-utils
+
+pdftotext example.pdf output.txt
