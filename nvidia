@@ -46,3 +46,5 @@ sudo nvidia-smi --lock-gpu-clocks=1695,1695
 # before install docker action
 sudo apt install nvidia-container-toolkit
 
+# orin启动nvidia docker命令
+sudo docker run --rm --runtime nvidia --gpus all -v $(pwd):$(pwd) -w $(pwd) ubuntu:20.04 
