@@ -128,3 +128,6 @@ vim /etc/docker/daemon.json
 3. 在这个页面下载可执行文件
 4. /usr/libexec/docker/cli-plugins 将可执行文件名改为docker-buildx
 
+# docker给镜像修改名字
+docker tag [image id] [name]:[tag]
+
