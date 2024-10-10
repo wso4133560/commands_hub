@@ -1,2 +1,5 @@
 # http server下载服务器命令
 python3 -m http.server [端口]
+
+# 使用vultr的时候需要
+ufw allow [端口]
