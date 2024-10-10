@@ -1,0 +1,2 @@
+# http server下载服务器命令
+python3 -m http.server [端口]
