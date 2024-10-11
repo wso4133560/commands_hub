@@ -3,3 +3,9 @@ python3 -m http.server [端口]
 
 # 使用vultr的时候需要
 ufw allow [端口]
+
+# 使用http proxy代理服务器
+apt install squid
+vim /etc/squid/squid.conf
+修改http_port 3128 为 http_port 0.0.0.0:80
+sudo systemctl restart squid
