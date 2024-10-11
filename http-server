@@ -8,4 +8,6 @@ ufw allow [端口]
 apt install squid
 vim /etc/squid/squid.conf
 修改http_port 3128 为 http_port 0.0.0.0:80
+# 注释掉所有的deny后
+http_access allow all
 sudo systemctl restart squid
