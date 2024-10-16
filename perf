@@ -18,3 +18,7 @@ perf record [命令] -e cpu-clock
 # perf采样 每秒采样999次
 perf record -F 999 [命令]
 perf report
+
+# perf 生成时间图
+在record之后
+perf script | perf timechart > timechart.svg
