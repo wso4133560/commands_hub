@@ -1,2 +1,2 @@
 # 使用perfetto的插件生成的perfetto的trace
-ENABLE_JITPROFILING=1 rocprofv2 --plugin perfetto --hip-trace --hsa-trace --kernel-trace -o prof python3 /root/aotriton/test/performance_forward.py
+ENABLE_JITPROFILING=1 rocprofv2 --plugin perfetto --hip-trace --hsa-trace --kernel-trace --roctx-trace -o prof python3 /root/aotriton/test/performance_forward.py
