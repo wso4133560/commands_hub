@@ -1,2 +1,9 @@
 # 使用perfetto的插件生成的perfetto的trace
 ENABLE_JITPROFILING=1 rocprofv2 --plugin perfetto --hip-trace --hsa-trace --kernel-trace --roctx-trace -o prof python3 /root/aotriton/test/performance_forward.py
+
+# 使用perfetto的插件生成的perfetto的trace
+ENABLE_JITPROFILING=1 rocprofv2 --plugin perfetto --sys-trace -o prof python3 /root/aotriton/test/performance_forward.py
+
+# 要想让--roctx-trace生效一定要加上
+  hipDeviceProp_t devProp;
+  hipGetDeviceProperties(&devProp, 0);
