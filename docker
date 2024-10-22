@@ -131,3 +131,8 @@ vim /etc/docker/daemon.json
 # docker给镜像修改名字
 docker tag [image id] [name]:[tag]
 
+# 启动带systemctl的docker
+sudo docker run --privileged \
+-v /run/systemd/system:/run/systemd/system \
+-v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
+-it ubuntu:20.04 systemctl
