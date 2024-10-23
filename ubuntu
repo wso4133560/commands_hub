@@ -69,3 +69,6 @@ Icon=/path/to/myapp_icon
 Terminal=false
 # 软件分类
 Categories=Education;Python;Development
+
+# ubuntu开机启动位置
+/etc/rc.local
