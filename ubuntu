@@ -70,6 +70,9 @@ Terminal=false
 # 软件分类
 Categories=Education;Python;Development
 
-# ubuntu开机启动位置
-vim /etc/rc.local
-命令写在 exit 0前面
+# ubuntu开机启动
+cd /etc/init.d
+create xxx.sh 脚本
+sudo update-rc.d xxx.sh defaults 90
+注：其中数字0-90是脚本启动的顺序号。数字越高执行越晚。
+重启即可完成，测试效果
