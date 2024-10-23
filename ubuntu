@@ -71,4 +71,5 @@ Terminal=false
 Categories=Education;Python;Development
 
 # ubuntu开机启动位置
-/etc/rc.local
+vim /etc/rc.local
+命令写在 exit 0前面
