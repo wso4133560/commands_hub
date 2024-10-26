@@ -16,6 +16,8 @@ git rm -f [文件名]
 # 克隆特定分支
 git clone [链接] -b [分支]
 
+# 更新代码避免出现Merge信息
+git pull --rebase
 
 # 修改名词
 git mv --force AppTest.java apptest.java
