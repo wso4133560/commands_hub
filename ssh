@@ -19,3 +19,7 @@ ssh -R 2222:192.168.1.100:22 user@jump_host
 连接到内网机器：
 一旦设置完成，您可以从外部机器通过跳板机访问内网机器。使用以下命令：
 ssh -p 2222 <内网机器用户名>@localhost
+
+# 将公钥拷贝到远端
+ssh-keygen
+ssh-copy-id -p [端口] [usr]@[ip]
