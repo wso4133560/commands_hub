@@ -10,3 +10,7 @@ Host *
     ControlPersist 10m
 
 mkdir -p ~/.ssh/sockets
+
+# ssh跳板机
+ssh -J [跳板机用户]@[跳板机IP]:[端口] [目标用户]:[目标IP]:[目标端口]
+可以写配置文件简单连接到目标主机
