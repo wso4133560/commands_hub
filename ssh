@@ -21,3 +21,7 @@ ssh -p 2222 <内网机器用户名>@[目的机器IP]
 # 将公钥拷贝到远端
 ssh-keygen
 ssh-copy-id -p [端口] [usr]@[ip]
+
+# ssh最大seesion限制
+配置文件：这些限制可以通过编辑/etc/ssh/sshd_config文件中的MaxSessions和MaxStartups选项进行调整。MaxSessions控制每个网络连接的最大会话数，而MaxStartups控制在没有身份验证的情况下允许的最大连接数。
+
