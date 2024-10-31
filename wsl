@@ -8,4 +8,5 @@ options = "metadata,umask=22,fmask=111"
 mountFsTab = true
 
 # 设置显示的环境变量
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0
+wsl --update
+xeyes &
