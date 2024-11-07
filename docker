@@ -136,3 +136,8 @@ sudo docker run --privileged \
 -v /run/systemd/system:/run/systemd/system \
 -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
 -it ubuntu:20.04 systemctl
+
+# Docker out of Docker
+另一种方法是将主机的Docker套接字（通常是/var/run/docker.sock）挂载到容器中。
+这样，容器内的Docker客户端可以直接与主机的Docker守护进程通信，而不需要在容器内启动一个新的Docker守护进程。
+这种方法被称为“Docker out of Docker”（DooD）
