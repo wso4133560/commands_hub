@@ -1,0 +1,9 @@
+# 安装包
+sudo apt install nodejs npm
+
+# 安装到特定版本
+npm install -g n
+# 用法
+n stable
+n last
+n [特定版本]
