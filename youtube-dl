@@ -1,0 +1,17 @@
+# install
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+# download video
+youtube-dl -o 'A REAL Back to School Laptop Guide.mp4' [url]
+
+# download multi-videos
+youtube-dl -a url.txt
+
+# only download wav
+youtube-dl -x [url]
+youtube-dl -x --audio-format mp3 [url]
+
+# download best quality video
+youtube-dl -f best [url]
+youtube-dl -f bestvideo+bestaudio [url]
