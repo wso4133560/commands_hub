@@ -1,0 +1,5 @@
+# extract wav from mp4
+ffmpeg -i input.mp4 -acodec pcm_s16le -ar 44100 -ac 2 output.wav
+
+ffmpeg -i input.mp4 -acodec pcm_s16le -ar 16000 -ac 1 output.wav
+
