@@ -3,3 +3,5 @@ wget https://github.com/yt-dlp/yt-dlp/releases/download/2024.11.04/yt-dlp_linux
 chmod +x yt-dlp_linux
 
 ./yt-dlp_linux [url]
+
+./yt-dlp_linux -S res,ext:mp4:m4a --recode mp4  
