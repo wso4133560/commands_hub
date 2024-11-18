@@ -6,3 +6,9 @@ ffmpeg -i input.mp4 -acodec pcm_s16le -ar 16000 -ac 1 output.wav
 # convert *.ass to *.srt
 ffmpeg -i input.ass output.srt
 
+# merge two mp4 into one mp4
+这种方法适用于文件编码相同且参数一致的情况。首先，你需要创建一个文本文件（例如input.txt），其中列出要合并的MP4文件路径，格式如下：
+file 'path/to/first.mp4'
+file 'path/to/second.mp4'
+然后，使用以下命令进行拼接：
+ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
