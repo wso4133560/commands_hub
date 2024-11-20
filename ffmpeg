@@ -12,3 +12,6 @@ file 'path/to/first.mp4'
 file 'path/to/second.mp4'
 然后，使用以下命令进行拼接：
 ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
+# 顺时针旋转90度
+ffmpeg -c:v h264 -i SVID_20191012_191012_1.mp4 -vf "transpose=1" -ss 00:00:00 -t 00:20:34 -c:v libx264 SVID_20191012_191012_1-new.mp4
