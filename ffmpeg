@@ -14,7 +14,7 @@ file 'path/to/second.mp4'
 ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
 
 # 顺时针旋转90度
-ffmpeg -c:v h264 -i SVID_20191012_191012_1.mp4 -vf "transpose=1" -ss 00:00:00 -t 00:20:34 -c:v libx264 SVID_20191012_191012_1-new.mp4
+ffmpeg -i SVID_20191012_191012_1.mp4 -vf "transpose=1" -ss 00:00:00 -t 00:20:34 SVID_20191012_191012_1-new.mp4
 
 # 查看音频的采样频率
 ffprobe -i SVID_20191014_164850_1.mp4 -select_streams a:0 -show_entries stream=sample_rate -v quiet -of default=noprint_wrappers=1:nokey=1
