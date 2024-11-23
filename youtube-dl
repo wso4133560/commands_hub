@@ -13,3 +13,5 @@ yt-dlp_linux -f 'bv*[ext=mp4]+ba[ext=m4a]' --merge-output-format mp4 https://www
 
 # 下载整个频道的音频命令
 yt-dlp -x --audio-format mp3 https://www.youtube.com/@LearnEnglishwithBobtheCanadian/videos
+
+yt-dlp -x --audio-format mp3 --output "%(playlist_index)s - %(title)s.%(ext)s" https://www.youtube.com/c/ExampleChannel
