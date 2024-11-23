@@ -5,3 +5,6 @@ chmod +x yt-dlp_linux
 ./yt-dlp_linux [url]
 
 ./yt-dlp_linux -S res,ext:mp4:m4a --recode mp4  
+
+# 下载整个频道的命令
+yt-dlp_linux -f 'bv*[height=720]+ba' --download-archive videos.txt https://www.youtube.com/c/FootheFlowerhorn/videos -o '%(channel)s/%(title)s.%(ext)s'
