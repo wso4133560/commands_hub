@@ -19,5 +19,8 @@ ffprobe -i SVID_20191014_164850_1.mp4 -select_streams a:0 -show_entries stream=s
 
 # 批量转换mp3到wav命令
 for file in *.mp3; do
-  ffmpeg -i "$file" "${file%.mp3}.wav"
+  ffmpeg -i "$file" -acodec pcm_s16le -ar 16000 "${file%.mp3}.wav"
 done
+
+# 单条命令
+ffmpeg -i input.mp3 -acodec pcm_s16le -ar 16000 output.wav
