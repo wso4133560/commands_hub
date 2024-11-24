@@ -1,0 +1,7 @@
+# 批量重命名文件
+find . -type f -name "*.mp3" -exec bash -c '
+for file; do
+  new_name=$(echo "$file" | sed -E "s|.*/([0-9]+).*|\1.mp3|")
+  mv "$file" "$(dirname "$file")/$new_name"
+done
+' bash {} +
