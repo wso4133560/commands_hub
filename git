@@ -106,7 +106,10 @@ git log --oneline
 git log -n 3 --patch
 
 # 查看某个文件的详细提交记录，包含diff
-git log -p README.md
+git log -p [文件]
+
+# 查看某个文件的提交文件的统计信息
+git log --stat [文件]
 
 # 撤销add
 git reset
