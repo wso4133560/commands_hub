@@ -165,3 +165,7 @@ git lfs track "*.extension"
 git add [big file]
 git commit -m
 git push
+
+# 使用http避免反复输入账号密码
+git config --global credential.helper store
+
