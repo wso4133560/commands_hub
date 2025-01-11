@@ -76,7 +76,7 @@ vim /etc/hosts
 127.0.0.1 [内网域名]
 
 2. 配置内网Nginx反向代理
-vim /etc/nginx/sites-available/gitlab.tpt.com
+vim /etc/nginx/sites-available/[域名]
 添加以下内容：
 server {
     listen 80;
