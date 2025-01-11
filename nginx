@@ -64,3 +64,8 @@ curl -x http://127.0.0.1:80 -L http://www.baidu.com
 # 本机测试
 curl -x http://47.245.30.201:80 -L http://www.baidu.com
 curl -x http://47.245.30.201:80 -L https://www.baidu.com
+
+# nginx的docker
+https://hub.docker.com/r/ubuntu/nginx
+git clone docker pull ubuntu/nginx:1.18-22.04_beta
+docker run -d --name nginx-container -e TZ=UTC -p 8080:80 ubuntu/nginx:1.18-22.04_beta
