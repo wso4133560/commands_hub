@@ -24,3 +24,7 @@ done
 
 # 单条命令
 ffmpeg -i input.mp3 -acodec pcm_s16le -ar 16000 output.wav
+
+# ffmpeg每秒提取mp4中有变化的帧
+ffmpeg -i [*.mp4] -vf "select='gt(scene,0.3)',mpdecimate,fps=1" -vsync vfr [*.png]
+
