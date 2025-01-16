@@ -22,3 +22,7 @@ pdb.set_trace()
 
 # python的环境变量
 export PYTHONPATH=[路径]:$PYTHONPATH
+
+# python设置临时源
+export PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
+
