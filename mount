@@ -38,3 +38,14 @@ sudo mount -t cifs //ip/[文件夹] [文件夹]
 
 # mount 读写挂载硬盘
  mount /dev/sda2 /mnt -o rw
+
+# 自动挂载
+自动挂载（可选）
+如果希望系统启动时自动挂载NTFS硬盘，可以编辑/etc/fstab文件：
+
+sudo nano /etc/fstab
+添加以下行：
+/dev/sdb1  /mnt/ntfs_drive  ntfs-3g  defaults  0  0
+defaults：使用默认挂载选项。
+0 0：表示不备份和不检查文件系统。
+保存并退出编辑器。
