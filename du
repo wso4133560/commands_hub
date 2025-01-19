@@ -3,3 +3,6 @@ du -hs * | sort -hr
 
 # 查看文件夹大小
 du [文件夹] --max-depth=0 -h
+
+# 查看包含隐藏文件夹的大小
+du -sh .[!.]* * | sort -h
