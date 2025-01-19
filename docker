@@ -170,3 +170,9 @@ WORKDIR /home/${USERNAME}
   
 CMD ["/bin/bash"]
 
+
+# 删除未使用的镜像
+docker image prune -a
+
+# 清理所有未使用的资源
+docker system prune -a
