@@ -10,3 +10,11 @@ mountFsTab = true
 # 设置显示的环境变量
 wsl --update
 xeyes &
+
+# 设置网络和主机一样
+1.C:\Users\<UserName> 进入这个文件
+2.C:\Users\<UserName>\.wslconfig 创建这个文件
+3.写入
+[wsl2]
+networkingMode=mirrored
+4. wsl --shutdown
