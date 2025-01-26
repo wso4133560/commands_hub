@@ -171,13 +171,16 @@ WORKDIR /home/${USERNAME}
 CMD ["/bin/bash"]
 
 # build-image sh
-IAMGE_NAME=$(whoami)-image
+#!/usr/bin/env bash
+IMAGE_NAME=$(whoami)-image
 set -x
-docker build \
+sudo docker build \
  --build-arg USER_ID=$(id -u) \
  --build-arg USERNAME=$(whoami) \
- -t $(IMAGE_NAME) \
+ -t ${IMAGE_NAME} \
  .
+
+ 
 
 # 删除未使用的镜像
 docker image prune -a
