@@ -18,3 +18,11 @@ xeyes &
 [wsl2]
 networkingMode=mirrored
 4. wsl --shutdown
+
+# 查看wsl版本
+wsl -l -v
+
+# 设置默认版本为2
+wsl --set-default-version 2
+
+
