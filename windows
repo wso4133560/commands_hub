@@ -21,3 +21,9 @@ cat log.txt | clip.exe
 
 # 设置本地不代理
 set no_proxy=localhost, 127.0.0.1, ::1
+
+# 创建本地账户的命令
+1. 在 Windows 11 OOBE 登录账号阶段按 Shift+F10 打开命令提示符
+2. 在命令提示符窗口中输入 OOBE\BYPASSNRO 按回车 (注意该命令是 \ 不是 /)
+3. 执行该命令后系统会自动重启重新进入 OOBE 设置流程，此时应当可以创建本地账户
+4. 如果仍然没有看到创建本地账户的选项，请断开设备的网络包括 WiFi 或有线连接，再执行 OOBE\BYPASSNRO
