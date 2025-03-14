@@ -79,6 +79,9 @@ git rm -cache [模块名字]
 # 修改提交的信息 追加提交内容
 git commit --amend
 
+# 不更新提交的前提下更新代码
+git commit --amend --no-edit
+
 # git环境变量信息
 git config --global -l
 
