@@ -172,3 +172,8 @@ git push
 # 使用http避免反复输入账号密码
 git config --global credential.helper store
 
+# 保存现有更改命令，并恢复到库上的代码
+git stash
+
+# 恢复git stash的命令
+git stash pop
