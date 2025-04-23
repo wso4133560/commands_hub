@@ -177,3 +177,13 @@ git stash
 
 # 恢复git stash的命令
 git stash pop
+
+# 将github上的某个分支的代码和项目的所有提交记录推送到本地的gerrit的做法
+1.
+git clone <github-repo-url>
+cd <repo-name>
+2.
+git remote add gerrit <gerrit-url>
+3. 提交所有的历史记录
+git push gerrit feature-branch:feature-branch
+
