@@ -1,2 +1,8 @@
 # 忽略证书认证
 wget [url] –-no-check-certificate
+
+# 根据列表中的url下载文件
+wget -i [url列表]
+
+# 设置wget下载到的路径
+wget -P [文件夹路径] [url]
