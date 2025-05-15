@@ -55,3 +55,13 @@ llvm-extract -func-list=function_list.txt output.bc -o 3.bc
 cmake -S llvm -B build -G "Unix Makefiles" -DLLVM_ENABLE_PROJECTS="clang;lld" -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_RUNTIMES="openmp"
 # 编译LLVMgold.so插件
 -DLLVM_BINUTILS_INCDIR=/path/to/binutils/include
+
+# 编译mlir的命令
+cmake -G Ninja ../llvm \
+-DLLVM_ENABLE_PROJECTS="mlir" \
+-DLLVM_BUILD_EXAMPLES=OFF \
+-DLLVM_TARGETS_TO_BUILD="host" \
+-DCMAKE_BUILD_TYPE=Release \
+-DLLVM_ENABLE_BINGDINGS_PYTHON=ON \
+-DLLVM_BUILD_UTILS=ON \
+-DLLVM_BUILD_UTILS=ON
