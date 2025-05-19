@@ -187,3 +187,6 @@ git remote add gerrit <gerrit-url>
 3. 提交所有的历史记录
 git push gerrit feature-branch:feature-branch
 
+# 导出某个分支（例如 main）的所有文件到一个目录
+git archive --format=tar main | tar -x -C /tmp/project-snapshot
+
