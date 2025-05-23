@@ -190,3 +190,10 @@ git push gerrit feature-branch:feature-branch
 # 导出某个分支（例如 main）的所有文件到一个目录
 git archive --format=tar main | tar -x -C /tmp/project-snapshot
 
+# 将多个提交生成多个独立的.patch文件，每个文件对应一个提交
+git format-patch [abc123..def456]
+生成最近3个提交的patch文件
+git format-patch HEAD~3
+
+
+
