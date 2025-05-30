@@ -201,3 +201,6 @@ git apply xxx.patch
 # 应用并提交多个补丁
 git am xxx.patch
 
+# 抛弃本地的是初始化使用库上的代码
+git reset --hard [remotes/origin/...]
+
