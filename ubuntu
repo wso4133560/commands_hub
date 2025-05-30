@@ -85,3 +85,20 @@ WantedBy=multi-user.target
 sudo systemctl enable wol.service
 sudo systemctl start wol.service
 
+# wakeup_mac 脚本
+#!/bin/bash
+
+TARGET_MAC="2a:52:6f:04:10:18"  # 替换成你的MAC地址
+
+# 遍历/sys/class/net下的所有网口
+for iface in /sys/class/net/*; do
+    mac=$(cat "$iface/address" 2>/dev/null);
+    # 标准化MAC地址格式（去掉分隔符并转小写）
+    normalized_mac=$(echo "$mac" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]');
+    target_mac_normalized=$(echo "$TARGET_MAC" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]');
+    if [ "$normalized_mac" = "$target_mac_normalized" ]; then
+        /usr/sbin/ethtool -s $(basename "$iface") wol g
+        exit 0;
+    fi
+done
+
