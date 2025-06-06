@@ -1,0 +1,5 @@
+# wine的官方安装流程文档
+https://gitlab.winehq.org/wine/wine/-/wikis/nl/Debian-Ubuntu
+
+# 处理wine的key的认证的命令
+sudo wget -nc -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
