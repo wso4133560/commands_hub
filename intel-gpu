@@ -4,3 +4,11 @@ sudo intel_gpu_top
 
 # 查看支持编码格式
 sudo apt install vainfo
+
+# openwrt docker里面如何查看编码方式
+1. --privileged把/dev绑定到docker里面
+2. 创建文件
+mkdir -p /tmp/xdg-runtime
+chmod 700 /tmp/xdg-runtime
+export XDG_RUNTIME_DIR=/tmp/xdg-runtime
+3.vainfo --display drm --device /dev/dri/renderD128
