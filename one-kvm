@@ -1,7 +1,12 @@
-# 带有声音的远程
+# 带有和核显声音的远程
 docker run --name kvmd -itd \
     --device /dev/video0:/dev/video0 \
     --device /dev/ttyUSB0:/dev/ttyUSB0 \
-	  --device /dev/snd:/dev/snd \
+    --device /dev/snd:/dev/snd \
+    --device /dev/dri/renderD128:/dev/dri/renderD128 \
+	--device /dev/dri/card0:/dev/dri/card0 \
     -p 4430:4430 -p 5900:5900 -p 623:623 \
     silentwind0/kvmd
+
+vim /etc/kvmd/override.ymal 中
+将--h264-hwenc 改成 --h264-hwenc=vaapi
