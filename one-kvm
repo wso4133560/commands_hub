@@ -1,5 +1,5 @@
 # 带有和核显声音的远程
-docker run --name kvmd -itd \
+docker run -e HWENCODER=vaapi --name kvmd -itd \
     --device /dev/video0:/dev/video0 \
     --device /dev/ttyUSB0:/dev/ttyUSB0 \
     --device /dev/snd:/dev/snd \
@@ -7,5 +7,4 @@ docker run --name kvmd -itd \
     -p 4430:4430 -p 5900:5900 -p 623:623 \
     silentwind0/kvmd
 
-vim /etc/kvmd/override.ymal 中
-将--h264-hwenc 改成 --h264-hwenc=vaapi
+one-kvm.mofeng.run/start_install/docker_install
