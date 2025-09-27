@@ -7,4 +7,6 @@ docker run -e HWENCODER=vaapi --name kvmd -itd \
     -p 4430:4430 -p 5900:5900 -p 623:623 \
     silentwind0/kvmd
 
-one-kvm.mofeng.run/start_install/docker_install
+# 使用MS2131采集卡
+vim /etc/kvmd/override.yaml
+修改mjpeg到 YUYV
