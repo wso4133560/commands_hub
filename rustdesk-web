@@ -1,0 +1,9 @@
+docker run -d \
+  --name rustdesk-web \
+  -p 5000:5000 \
+  -e CUSTOM_RENDEZVOUS_SERVER="your-server.com:21116" \
+  -e RELAY_SERVER="your-relay-server.com:21117" \
+  -e KEY="your-public-key" \
+  -e API_SERVER="your-api-server.com" \
+  --device /dev/dri:/dev/dri \
+  pmietlicki/docker-rustdesk-web-client:v1
