@@ -22,3 +22,6 @@ docker run -d --name RustDesk-API \
  -e RUSTDESKAPIRUSTDESKAPISERVER=http://192.168.3.5:21114 \
  -e RUSTDESKAPIRUSTDESK_KEY=12345678 \
  lejianwen/rustdesk-api:latest
+
+重置密码命令
+./apimain reset-admin-pwd admin
