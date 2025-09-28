@@ -7,3 +7,7 @@ docker run -d \
   -e API_SERVER="your-api-server.com" \
   --device /dev/dri:/dev/dri \
   pmietlicki/docker-rustdesk-web-client:v1
+
+
+需要依赖这个项目
+https://github.com/lejianwen/rustdesk-api
