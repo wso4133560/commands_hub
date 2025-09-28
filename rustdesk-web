@@ -14,7 +14,6 @@ https://github.com/lejianwen/rustdesk-api
 docker run -d --name RustDesk-API \
  --restart always \
  -p 21114:21114 \
- -v /data/rustdesk/api:/app/data \
  -e TZ=Asia/Shanghai \
  -e RUSTDESKAPILANG=zh-CN \
  -e RUSTDESKAPIRUSTDESKIDSERVER=192.168.3.5:21116 \
