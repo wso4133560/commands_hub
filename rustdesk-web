@@ -1,26 +1,104 @@
-docker run -d \
-  --name rustdesk-web \
-  -p 5000:5000 \
-  -e CUSTOM_RENDEZVOUS_SERVER="your-server.com:21116" \
-  -e RELAY_SERVER="your-relay-server.com:21117" \
-  -e KEY="your-public-key" \
-  -e API_SERVER="your-api-server.com" \
-  --device /dev/dri:/dev/dri \
-  pmietlicki/docker-rustdesk-web-client:v1
+# 创建容器的命令
+networks:
+   rustdesk-net:
+     external: false
+ services:
+   rustdesk-server:
+     container_name: rustdesk-server
+     ports:
+       - 21115:21115
+       - 21116:21116
+       - 21116:21116/udp
+       - 21117:21117
+       #- 21118:21118
+       #- 21119:21119
+     image: rustdesk/rustdesk-server-s6:latest
+     environment:
+       - RELAY=<server>
+       - ENCRYPTED_ONLY=1
+     volumes:
+       - /data/rustdesk/server:/data
+     networks:
+       - rustdesk-net
+     restart: unless-stopped
+   rustdesk-api:
+     container_name: rustdesk-api
+     ports:
+       - 21114:21114
+     image: lejianwen/rustdesk-api
+     environment:
+       - TZ=Asia/Shanghai
+       - RUSTDESK_API_RUSTDESK_ID_SERVER=192.168.100.1:21116
+       - RUSTDESK_API_RUSTDESK_RELAY_SERVER=192.168.100.1:21117
+       - RUSTDESK_API_RUSTDESK_API_SERVER=http://192.168.100.1:30080
+       - RUSTDESK_API_RUSTDESK_KEY=<desk key>
+     volumes:
+       - /data/rustdesk/api:/app/data #将数据库挂载
+       - /data/rustdesk/server:/app/conf/data #挂载key文件到api容器，可以不用使用 RUSTDESK_API_RUSTDESK_KEY
+     networks:
+       - rustdesk-net
+     restart: unless-stopped
+     depends_on:
+       - rustdesk-server
+   nginx:
+     container_name: rustdesk-nginx
+     image: nginx:latest
+     ports:
+       - 30080:80
+       - 30443:443
+       - 21118:21118
+       - 21119:21119
+     volumes:
+       - /data/rustdesk/nginx/conf.d:/etc/nginx/conf.d
+     networks:
+       - rustdesk-net
+     restart: unless-stopped
+     depends_on:
+       - rustdesk-api
+       - rustdesk-server
 
+# 设置nginx代理的配置
+vim /data/rustdesk/nginx/conf.d/nginx.conf
 
-需要依赖这个项目
-https://github.com/lejianwen/rustdesk-api
-docker run -d --name RustDesk-API \
- --restart always \
- -p 21114:21114 \
- -e TZ=Asia/Shanghai \
- -e RUSTDESKAPILANG=zh-CN \
- -e RUSTDESKAPIRUSTDESKIDSERVER=[域名]:21116 \
- -e RUSTDESKAPIRUSTDESKRELAYSERVER=[域名]:21117 \
- -e RUSTDESKAPIRUSTDESKAPISERVER=http://[域名]:21114 \
- -e RUSTDESKAPIRUSTDESK_KEY=12345678 \
- lejianwen/rustdesk-api:latest
+server {
+    server_name _;
+    listen 80;
+    location / {
+        proxy_set_header        X-Real-IP       $remote_addr;
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_pass http://rustdesk-api:21114/;
+    }
+}
 
-重置密码命令
+server {
+    listen 21118;
+    server_name 192.168.100.1;
+    location / {
+        proxy_pass http://rustdesk-server:21118;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 21119;
+    server_name 192.168.100.1;
+    location / {
+        proxy_pass http://rustdesk-server:21119;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+# 重置密码命令
 ./apimain reset-admin-pwd admin
