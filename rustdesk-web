@@ -102,3 +102,6 @@ server {
 
 # 重置密码命令
 ./apimain reset-admin-pwd admin
+
+# 网页打开命令
+http://192.168.100.1:30080/webclient/#/
