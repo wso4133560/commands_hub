@@ -1,0 +1,7 @@
+./RKTools/linux/Linux_Pack_Firmware/rockdev/rkImageMaker -unpack ../update.img ./unpack-update/
+
+ ./RKTools/linux/Linux_Pack_Firmware/rockdev/afptool -unpack ./unpack-update/firmware.img ./unpack-firmware/
+
+../RKTools/linux/Linux_Pack_Firmware/rockdev/afptool -pack ./ ../unpack-update/firmware.img
+
+../RKTools/linux/Linux_Pack_Firmware/rockdev/afptool -pack ./ ../unpack-update/firmware.img
