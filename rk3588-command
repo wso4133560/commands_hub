@@ -5,3 +5,8 @@
 ../RKTools/linux/Linux_Pack_Firmware/rockdev/afptool -pack ./ ../unpack-update/firmware.img
 
  ../RKTools/linux/Linux_Pack_Firmware/rockdev/rkImageMaker -RK3568 ./boot.bin ./firmware.img ../update.img -os_type:androidos
+
+git clone https://github.com/rockchip-linux/rkbin
+cd rkbin/tools
+chmod +x rkimage
+
