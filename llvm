@@ -65,3 +65,12 @@ cmake -G Ninja ../llvm \
 -DLLVM_ENABLE_BINGDINGS_PYTHON=ON \
 -DLLVM_BUILD_UTILS=ON \
 -DLLVM_BUILD_UTILS=ON
+
+# tablegen 入门文档
+https://csstormq.github.io/blog/LLVM%20%E4%B9%8B%E5%90%8E%E7%AB%AF%E7%AF%87%EF%BC%881%EF%BC%89%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20TableGen
+
+# 重要的获取指令信息的命令
+llvm-tblgen -print-records <input-file> -o <output-file>	打印所有的记录（包括抽象记录和具体记录）	llvm-tblgen -print-records X86.td -I ../../../include
+llvm-tblgen -gen-register-info <input-file> -o <output-file>	生成寄存器信息所对应的 C++ 代码	llvm-tblgen -gen-register-info X86.td -I ../../../include
+llvm-tblgen -print-enums -class=<class-name> <input-file> -o <output-file>	打印指定类别所对应的 C++ 代码中的枚举值。<class-name>的可取值：Register、Instruction等。	llvm-tblgen -print-enums -class=Register X86.td -I ../../../include
+
