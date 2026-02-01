@@ -1,0 +1,23 @@
+# 使用第三方的大模型 以deepseek为例
+1.添加环境变量 vim ~/.bashrc
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_AUTH_TOKEN="api key"
+export API_TIMEOUT_MS=600000
+export ANTHROPIC_MODEL=deepseek-chat
+export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+
+2. 配置~/.claude/settings.json 文件
+{
+    "env": {
+        "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+        "ANTHROPIC_AUTH_TOKEN": "api key",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+    }
+}
+
+3. 绕过登录验证 配置 ~/.claude.json
+ "hasCompletedOnboarding": true
+
+
+
