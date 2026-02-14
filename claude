@@ -28,3 +28,7 @@ export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 # 安装claude-mem
 > /plugin marketplace add thedotmack/claude-mem
 > /plugin install claude-mem
+
+# 设置推理模式
+export MAX_THINKING_TOKENS=10000
+
