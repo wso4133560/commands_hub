@@ -32,3 +32,5 @@ export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 # 设置推理模式
 export MAX_THINKING_TOKENS=10000
 
+# 设置不询问模式
+claude --dangerously-skip-permissions
