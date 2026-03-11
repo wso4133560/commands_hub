@@ -13,3 +13,10 @@ mkdir -p /tmp/xdg-runtime
 chmod 700 /tmp/xdg-runtime
 export XDG_RUNTIME_DIR=/tmp/xdg-runtime
 3.vainfo --display drm --device /dev/dri/renderD128
+
+one-kvm的docker识别不到intel显卡的问题
+ echo "deb http://deb.debian.org/debian bookworm main non-free" >> /etc/apt/sources.list
+  apt-get update
+  apt-get install -t bookworm intel-media-va-driver-non-free
+  LIBVA_DRIVER_NAME=iHD vainfo --display drm --device /dev/dri/renderD128
+
