@@ -29,6 +29,10 @@ export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 > /plugin marketplace add thedotmack/claude-mem
 > /plugin install claude-mem
 
+opus计划，sonet执行的命令
+/model opusplan
+
+
 # 设置推理模式
 export MAX_THINKING_TOKENS=10000
 
