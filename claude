@@ -38,3 +38,8 @@ export MAX_THINKING_TOKENS=10000
 
 # 设置不询问模式
 claude --dangerously-skip-permissions
+
+# 一口气写完代码
+npm install -g @openai/codex oh-my-codex
+omx setup
+omx --madmax --high
