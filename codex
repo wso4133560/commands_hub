@@ -20,3 +20,23 @@ for d in dirs:
     '''
     subprocess.run(cmd, shell=True)
   
+# 工业级
+codex exec "
+Goal: Fully analyze and improve this FPGA project.
+
+Loop:
+1. Analyze code
+2. Identify issues
+3. Propose fixes
+4. Apply fixes
+5. Re-evaluate
+
+Stop when:
+- No major issues remain
+- Code quality is acceptable
+
+Keep iterating until goal is achieved.
+" \
+--full-auto \
+--sandbox workspace-write \
+< /dev/null
