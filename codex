@@ -1,0 +1,22 @@
+# 一直运行的命令
+codex exec "完成整个项目重构直到所有测试通过" \
+  --full-auto \
+  --sandbox danger-full-access
+
+# python 跑多个项目的分析
+import os
+import subprocess
+
+dirs = [d for d in os.listdir() if d.startswith("CH")]
+
+os.makedirs("reports", exist_ok=True)
+
+for d in dirs:
+    print(f"Analyzing {d}...")
+    cmd = f'''
+    cd {d} && codex exec "
+    分析当前项目源码，输出详细的源码分析的markdown文档.
+    " --skip-git-repo-check > ../reports/{d}.md
+    '''
+    subprocess.run(cmd, shell=True)
+  
