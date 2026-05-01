@@ -39,4 +39,5 @@ Keep iterating until goal is achieved.
 " \
 --full-auto \
 --sandbox workspace-write \
+--skip-git-repo-check \
 < /dev/null
