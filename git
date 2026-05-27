@@ -207,3 +207,5 @@ git reset --hard [remotes/origin/...]
 # 使用ssh 替换 https的命令
 git config --global url."git@github.com:".insteadOf "https://github.com/"
 
+# github如果断流可以设置下面参数
+sudo sysctl -w net.ipv4.tcp_mtu_probing=1
