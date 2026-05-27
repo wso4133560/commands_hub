@@ -204,3 +204,6 @@ git am xxx.patch
 # 抛弃本地的是初始化使用库上的代码
 git reset --hard [remotes/origin/...]
 
+# 使用ssh 替换 https的命令
+git config --global url."git@github.com:".insteadOf "https://github.com/"
+
